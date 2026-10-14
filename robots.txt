@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://maxtanngo.github.io/sitemap.xml
