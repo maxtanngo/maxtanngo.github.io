@@ -1,0 +1,33 @@
+.nav a.nav-study {
+  color: #ffeab0;
+  background: #382b18;
+  border: 1px solid #9a773e;
+  border-radius: 7px;
+  padding: 7px 11px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+.nav a.nav-study:hover,
+.nav a.nav-study:focus-visible {
+  color: #fff;
+  background: #554020;
+}
+@media (min-width: 901px) and (max-width: 1330px) {
+  .site-header .nav:has(.nav-study) { gap: clamp(7px, 1.1vw, 16px); }
+}
+.study-page .study-back { color: #ffeab0; font-weight: 650; }
+.study-main { width: min(1100px, calc(100% - 36px)); margin: auto; padding: clamp(45px, 8vw, 88px) 0; }
+.study-intro h1 { margin: 0 0 9px; font-size: clamp(44px, 8vw, 78px); line-height: 1; }
+.study-intro p, .study-card p { color: #b9c4bd; line-height: 1.6; }
+.study-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 20px; list-style: none; padding: 0; margin: 36px 0 0; }
+.study-card { display: flex; gap: 20px; height: 100%; padding: clamp(18px, 4vw, 32px); border: 1px solid #465240; border-radius: 16px; background: linear-gradient(120deg, #222718, #131b17 60%); }
+.study-icon { flex: 0 0 auto; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 12px; color: #ffeab0; background: #3f311a; font-size: 34px; }
+.study-card h2 { margin: 3px 0 8px; font-size: clamp(20px, 3vw, 29px); }
+.study-card p { margin: 0 0 16px; }
+.study-card .study-grade { margin: 0; color: #ffeab0; font-size: 13px; font-weight: 700; }
+.study-actions { display: flex; flex-wrap: wrap; gap: 9px; }
+#vietmath-kids { scroll-margin-top: 100px; }
+@media (max-width: 420px) {
+  .study-card { gap: 11px; }
+  .study-icon { width: 36px; height: 36px; font-size: 24px; }
+}
