@@ -19,7 +19,7 @@
 .study-main { width: min(1100px, calc(100% - 36px)); margin: auto; padding: clamp(45px, 8vw, 88px) 0; }
 .study-intro h1 { margin: 0 0 9px; font-size: clamp(44px, 8vw, 78px); line-height: 1; }
 .study-intro p, .study-card p { color: #b9c4bd; line-height: 1.6; }
-.study-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 20px; list-style: none; padding: 0; margin: 36px 0 0; }
+.study-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; list-style: none; padding: 0; margin: 36px 0 0; }
 .study-card {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
@@ -47,8 +47,14 @@
 .study-card p { margin: 0 0 16px; }
 .study-card .study-grade { margin: 0; color: #ffeab0; font-size: 13px; font-weight: 700; }
 .study-actions { display: flex; flex-wrap: wrap; gap: 9px; }
-#vietmath-kids { scroll-margin-top: 100px; }
+#vietmath-kids, #vietmath-thcs { scroll-margin-top: 100px; }
 @media (max-width: 760px) {
   .study-grid { grid-template-columns: minmax(0, 1fr); }
   .study-card { grid-template-columns: minmax(0, 1fr); }
 }
+
+.study-card-thcs { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); background: linear-gradient(120deg, #231a3b, #171522 70%); border-color: #4a3a67; }
+.study-thcs-mark { display: grid; place-items: center; min-height: 205px; align-self: stretch; background: radial-gradient(ellipse at center, #463478, #251b40 73%); }
+.study-thcs-mark > span { display: inline-flex; align-items: center; justify-content: center; width: 88px; height: 88px; border-radius: 22px; color: #142018; background: #c9f465; font-size: 43px; font-weight: 850; }
+.study-thcs-mark span span { color: #3a6b40; }
+@media (max-width: 760px) { .study-card-thcs { grid-template-columns: minmax(0, 1fr); } .study-thcs-mark { min-height: 135px; } .study-thcs-mark > span { width: 63px; height: 63px; border-radius: 16px; font-size: 32px; } }
