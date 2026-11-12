@@ -69,3 +69,9 @@ Workflow build thư mục `dist` rồi deploy lên GitHub Pages. Nếu repositor
 - `/downloads/` — kho tải về
 - `/guides/` — hướng dẫn
 - `/about/` — thông tin dự án và góp ý
+
+## Game trên trình duyệt
+
+- `/games/` là trang danh sách. Mỗi game có một thẻ dẫn tới trang chơi riêng.
+- `/games/mua-thuan-gio-hoa/` chứa bản chơi cùng CSS, JavaScript và âm thanh. Khi cập nhật game, giữ nguyên đường dẫn này để người chơi tiếp tục dùng bản lưu trên website.
+- Để thêm game, đặt bản chạy tĩnh trong một thư mục con mới của `games/`, thêm thẻ vào `games/index.html` và bổ sung URL vào sitemap.
