@@ -20,14 +20,35 @@
 .study-intro h1 { margin: 0 0 9px; font-size: clamp(44px, 8vw, 78px); line-height: 1; }
 .study-intro p, .study-card p { color: #b9c4bd; line-height: 1.6; }
 .study-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 20px; list-style: none; padding: 0; margin: 36px 0 0; }
-.study-card { display: flex; gap: 20px; height: 100%; padding: clamp(18px, 4vw, 32px); border: 1px solid #465240; border-radius: 16px; background: linear-gradient(120deg, #222718, #131b17 60%); }
-.study-icon { flex: 0 0 auto; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 12px; color: #ffeab0; background: #3f311a; font-size: 34px; }
+.study-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #465240;
+  border-radius: 16px;
+  background: linear-gradient(120deg, #222718, #131b17 70%);
+}
+.study-visual { position: relative; margin: 0; align-self: start; }
+.study-visual img { display: block; width: 100%; height: auto; }
+.study-visual figcaption {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  background: #101612e8;
+  color: #fff;
+  font-size: 11px;
+}
+.study-card-content { padding: clamp(20px, 3vw, 38px); }
 .study-card h2 { margin: 3px 0 8px; font-size: clamp(20px, 3vw, 29px); }
 .study-card p { margin: 0 0 16px; }
 .study-card .study-grade { margin: 0; color: #ffeab0; font-size: 13px; font-weight: 700; }
 .study-actions { display: flex; flex-wrap: wrap; gap: 9px; }
 #vietmath-kids { scroll-margin-top: 100px; }
-@media (max-width: 420px) {
-  .study-card { gap: 11px; }
-  .study-icon { width: 36px; height: 36px; font-size: 24px; }
+@media (max-width: 760px) {
+  .study-grid { grid-template-columns: minmax(0, 1fr); }
+  .study-card { grid-template-columns: minmax(0, 1fr); }
 }
