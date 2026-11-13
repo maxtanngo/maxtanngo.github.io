@@ -59,3 +59,43 @@
 #vat-ly-thcs, #vat-ly-thpt { scroll-margin-top: 100px; }
 
 #hoa-hoc-thcs, #hoa-hoc-thpt { scroll-margin-top: 100px; }
+
+.study-filter:not([hidden]) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 10px 20px;
+  margin-top: 28px;
+  padding: 14px 16px;
+  border: 1px solid #39473c;
+  border-radius: 14px;
+  background: #161e19;
+}
+.study-filter fieldset { min-inline-size: 0; margin: 0; padding: 0; border: 0; }
+.study-filter legend { margin: 0 0 8px; padding: 0; color: #e4ebe1; font-size: 13px; font-weight: 700; }
+.study-filter-options { display: flex; flex-wrap: wrap; gap: 6px; }
+.study-filter-options label { position: relative; cursor: pointer; }
+.study-filter-options input { position: absolute; width: 1px; height: 1px; margin: 0; clip-path: inset(50%); }
+.study-filter-options span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding-inline: 14px;
+  border: 1px solid #536252;
+  border-radius: 9px;
+  color: #edf2e9;
+  font-size: 14px;
+  font-weight: 650;
+}
+.study-filter-options label:hover span { background: #273528; }
+.study-filter-options input:checked + span { background: #c9f465; border-color: #c9f465; color: #172015; }
+.study-filter-options input:focus-visible + span { outline: 2px solid #e4ffb2; outline-offset: 3px; }
+.study-filter-count { margin: 0 0 10px; color: #bbc9bc; font-size: 13px; }
+.study-filter:not([hidden]) + .study-grid { margin-top: 18px; }
+.study-grid > [hidden] { display: none; }
+@media (max-width: 390px) {
+  .study-filter { padding-inline: 12px; }
+  .study-filter-options span { padding-inline: 10px; }
+}
