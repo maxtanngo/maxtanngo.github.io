@@ -15,10 +15,26 @@
 @media(min-width:851px){.filters{flex-shrink:0}}
 .math-lab{border-color:#d8cef1;background:#fff}.math-lab h2{margin-bottom:8px}.lab-challenge{color:var(--muted)}.lab-visual{margin-top:16px;background:#f7f5fc;border:1px solid #e6e0f0;padding:clamp(12px,2.5vw,22px);border-radius:12px}.lab-visual canvas{display:block;width:100%;max-width:500px;height:auto;margin:auto}.lab-controls{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:12px}.lab-control{display:grid;gap:6px;min-width:min(185px,100%);flex:1;font-weight:650;font-size:14px}.lab-control input[type=range]{width:100%;accent-color:var(--primary);min-height:30px}.lab-control select{width:max-content;min-width:90px;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:white}.lab-status{padding:11px 13px;margin-top:10px;background:#ede8f9;border-radius:9px;color:#34216d;font-weight:600}.fraction-row{display:grid;grid-template-columns:46px minmax(0,1fr);gap:9px;align-items:center;font-weight:750}.fraction-row+.fraction-row{margin-top:10px}.fraction-bar{display:grid;min-height:33px;gap:2px}.fraction-bar span{background:#e1d9ee;border-radius:4px}.fraction-bar .filled{background:#6046b7}.coin-bars{display:grid;gap:11px}.coin-bars span{display:flex;justify-content:space-between}.coin-bars progress{height:13px}.math-lab .actions{margin:0}
 
-.footer-line{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;min-height:36px}.feedback-details{width:max-content;max-width:100%}.feedback-details summary{width:max-content;margin-left:auto;cursor:pointer;border:1px solid var(--line);background:white;border-radius:8px;padding:7px 12px;color:var(--primary);font-weight:750}.feedback-details summary:hover{background:var(--tint)}.feedback-details summary:focus-visible{outline:3px solid #6f50e4;outline-offset:3px}.feedback-contact{margin-top:8px;max-width:320px;padding:12px 15px;border-radius:10px;border:1px solid var(--line);background:white}.feedback-contact ul{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:4px}.feedback-contact a{color:var(--primary);display:inline-block;padding-block:3px;text-underline-offset:3px}@media(max-width:560px){.footer{grid-template-columns:1fr}.feedback-details summary{margin-left:0}}
+.footer{grid-template-columns:minmax(0,1fr);gap:18px}
+.footer-line{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px}
+.contact-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.55fr);align-items:center;gap:clamp(16px,3vw,36px);padding:clamp(18px,3vw,30px);border-radius:18px;background:#261b46;color:#fff}
+.contact-intro{display:flex;align-items:flex-start;gap:13px}
+.contact-icon{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:10px;background:#c9f465;color:#142018;font-size:19px;font-weight:850}
+.contact-intro h2{font-size:clamp(21px,2.5vw,27px);margin-bottom:5px}
+.contact-intro p{color:#e0d8f1;font-size:13px;line-height:1.55}
+.contact-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.contact-actions a{display:flex;flex-direction:column;justify-content:center;min-height:64px;gap:3px;padding:10px;border:1px solid #6c5d87;border-radius:10px;background:#392b57;color:#fff;text-decoration:none;overflow-wrap:anywhere}
+.contact-actions a:hover{background:#514071}
+.contact-actions a:focus-visible{outline-color:#c9f465}
+.contact-actions strong span{margin-left:2px}
+.contact-actions small{font-size:12px;color:#eee6fb}
+.contact-actions .contact-email{background:#ece4ff;color:#291b4c;border-color:#ece4ff}
+.contact-actions .contact-email:hover{background:#fff}
+.contact-actions .contact-email small{color:#4c3b72}
+@media(max-width:850px){.contact-panel{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:470px){.contact-actions{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.contact-actions .contact-email{grid-column:1/-1}}
 
 </style>
-<link rel="canonical" href="https://maxngo.io.vn/hoc-tap/vietmath-thcs/">
 </head>
 <body>
 <a class="skip" href="#main">Đến nội dung</a>
@@ -31,18 +47,20 @@
 </div></header>
 <main id="main" class="wrap" tabindex="-1"></main>
 <footer class="wrap footer">
-  <div class="footer-line"><a href="https://maxngo.io.vn/">VietMath THCS · MaxNgo</a><span>Tiến độ lưu trên trình duyệt này.</span><a href="#nguon">Nguồn nội dung</a></div>
-  <details class="feedback-details">
-    <summary>Góp ý</summary>
-    <div class="feedback-contact">
-      <p>Phụ huynh và học sinh có thể gửi góp ý về bài học hoặc báo lỗi.</p>
-      <ul>
-        <li><a href="mailto:Tannt4@gmail.com?subject=G%C3%B3p%20%C3%BD%20VietMath%20THCS">Tannt4@gmail.com</a></li>
-        <li><a href="tel:+84973333210">097.3333.210</a></li>
-        <li><a href="https://maxngo.io.vn/">MaxNgo.io.vn</a></li>
-      </ul>
+
+  <section class="contact-panel" aria-labelledby="contact-heading">
+    <div class="contact-intro">
+      <span class="contact-icon" aria-hidden="true">M.</span>
+      <div><h2 id="contact-heading">Góp ý cho VietMath</h2>
+      <p>Gửi nhận xét về bài học, báo câu hỏi có lỗi hoặc đề xuất tính năng cho VietMath THCS.</p></div>
     </div>
-  </details>
+    <div class="contact-actions">
+      <a class="contact-email" href="mailto:Tannt4@gmail.com?subject=G%C3%B3p%20%C3%BD%20VietMath%20THCS&amp;body=B%C3%A0i%20h%E1%BB%8Dc%20ho%E1%BA%B7c%20m%C3%A3%20%C4%91%E1%BB%81%3A%0A%0AN%E1%BB%99i%20dung%20g%C3%B3p%20%C3%BD%3A%0A"><strong>Gửi email góp ý <span aria-hidden="true">↗</span></strong><small>Tannt4@gmail.com</small></a>
+      <a href="tel:+84973333210"><strong>Gọi hỗ trợ <span aria-hidden="true">↗</span></strong><small>097.3333.210</small></a>
+      <a href="https://maxngo.io.vn/"><strong>Trang MaxNgo <span aria-hidden="true">↗</span></strong><small>MaxNgo.io.vn</small></a>
+    </div>
+  </section>
+  <div class="footer-line"><a href="https://maxngo.io.vn/">VietMath THCS · MaxNgo</a><span>Tiến độ lưu trên trình duyệt này.</span><a href="#nguon">Nguồn nội dung</a></div>
 </footer>
 <script>
 /* Nội dung biên soạn cho VietMath THCS. Mỗi hàm tạo câu trả về đề, đáp án và lời giải. */
