@@ -3,7 +3,7 @@ export async function loadModel(report){
  if(!navigator.gpu)throw new Error('Thiết bị chưa hỗ trợ WebGPU.');
  const adapter=await navigator.gpu.requestAdapter();
  if(!adapter)throw new Error('Trình duyệt chưa truy cập được GPU.');
- const model=adapter.features.has('shader-f16')?'Qwen2.5-1.5B-Instruct-q4f16_1-MLC':'Qwen2.5-1.5B-Instruct-q4f32_1-MLC';
+ const model=adapter.features.has('shader-f16')?'Qwen2.5-0.5B-Instruct-q4f16_1-MLC':'Qwen2.5-0.5B-Instruct-q4f32_1-MLC';
  loading??=import('https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.88/lib/index.js').then(({CreateMLCEngine})=>CreateMLCEngine(model,{initProgressCallback:report})).catch(error=>{loading=undefined;throw error;});
  return loading;
 }
