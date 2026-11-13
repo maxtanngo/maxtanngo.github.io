@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gia sư AI lớp 9 và 12 | MaxNgo</title>
+<meta name="description" content="Gia sư MaxNgo cho Toán, Vật Lý và Hóa Học lớp 9 và 12.">
+<link rel="canonical" href="https://maxngo.io.vn/hoc-tap/gia-su/">
+<link rel="icon" href="/favicon.svg">
+<link rel="stylesheet" href="/assets/main-DcVfOm0a.css">
+<link rel="stylesheet" href="/assets/site-navigation.css?v=20261113">
+<link rel="stylesheet" href="./tutor.css">
+<script type="module" src="./tutor.js"></script>
+</head>
+<body>
+<header class="maxngo-header"><div class="maxngo-bar"><a class="maxngo-brand" href="/"><span aria-hidden="true">M.</span>MaxNgo AI</a><a href="/hoc-tap/" class="back-link">← Học Tập</a></div></header>
+<main class="tutor">
+<header class="tutor-intro"><p class="kicker">Lớp 9 và lớp 12</p><h1>Gia sư AI MaxNgo</h1><p>Ôn kiến thức, hỏi bài và thử cách giải theo từng bước.</p></header>
+<div class="tutor-layout">
+<section class="tutor-panel" aria-label="Hỏi bài">
+<form id="ask">
+<div class="tutor-controls">
+<label>Lớp <select id="grade"><option>9</option><option>12</option></select></label>
+<label>Môn học <select id="subject"><option>Toán</option><option>Vật Lý</option><option>Hóa Học</option></select></label>
+<label>Chế độ <select id="mode"><option value="basic">Cơ bản</option><option value="practice">Luyện tập</option><option value="advanced">Nâng cao</option></select></label>
+</div>
+<label for="question">Câu hỏi của em</label>
+<textarea id="question" required maxlength="1200" rows="4" placeholder="Ví dụ: Khi nào cần đổi chiều bất phương trình?"></textarea>
+<p class="tutor-note">Chỉ nhập nội dung bài học. Cuộc trò chuyện được giữ trong tab này.</p>
+<div class="tutor-actions"><button class="tutor-primary" id="submit">Hỏi gia sư</button><button type="button" id="clear">Xóa cuộc trò chuyện</button></div>
+</form>
+<p id="status" role="status" class="tutor-note"></p>
+<div id="answers" aria-label="Cuộc trò chuyện"></div>
+</section>
+<aside class="tutor-panel tutor-side">
+<h2>AI trên thiết bị</h2>
+<p>Chế độ tùy chọn dùng GPU của trình duyệt để trả lời câu hỏi bằng tiếng Việt. Lần đầu cần Internet và tải mô hình dung lượng lớn (có thể trên 1 GB). Câu hỏi được xử lý trên thiết bị.</p>
+<button type="button" id="enable">Bật AI thử nghiệm</button>
+<p class="tutor-note">Câu trả lời AI có thể sai. Hãy đối chiếu công thức và ví dụ trong học liệu.</p>
+<h2>Học liệu theo chủ đề</h2>
+<p id="library-count"></p><div id="library"></div>
+</aside>
+</div>
+</main>
+</body></html>

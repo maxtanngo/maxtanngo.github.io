@@ -99,3 +99,8 @@
   .study-filter { padding-inline: 12px; }
   .study-filter-options span { padding-inline: 10px; }
 }
+
+.study-tutor-callout{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;margin-top:16px;padding:18px;border:1px solid #4a6245;border-radius:14px;background:#1c291e}
+.study-tutor-callout h2{margin:0 0 4px;font-size:22px}
+.study-tutor-callout p{margin:0;color:#c6d2c3}
+.study-tutor-callout + .study-grid{margin-top:18px}

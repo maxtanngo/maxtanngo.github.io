@@ -520,8 +520,10 @@ function sources(){
  '<section class="panel"><p>App dùng để học và ôn theo chủ đề. Nội dung hiện có gồm lý thuyết tóm tắt, ví dụ và bài luyện tự chấm. Đề tổng hợp lớp 9 là đề tự luyện.</p><ul class="source-list"><li><a href="https://thcsandong.haiphong.edu.vn/van-ban-bo-gddt/chuong-trinh-giao-duc-pho-thong-mon-toan-ban-hanh-kem-theo-thong-tu-so-322018tt/vbct/20343/91425">Chương trình GDPT môn Toán</a></li><li><a href="https://luyentap.vio.edu.vn/">VioEdu</a> · luyện tương tác theo khối lớp</li><li><a href="https://olm.vn/bg/toan-6-16438?week=0">OLM</a> · học và luyện theo chương, bài</li><li><a href="https://support.khanacademy.org/hc/en-us/articles/360037494231-What-are-Mastery-Challenges">Khan Academy</a> · ôn theo kỹ năng</li><li><a href="https://hoctot.hocmai.vn/">HOCMAI</a> · lộ trình ôn lớp 9 và vào 10</li></ul></section>');
 }
 function render(){
- gradeInput.value=String(data.grade);
  const route=currentRoute();
+ const linkedTopic=route.startsWith('bai/')?byId.get(route.slice(4)):null;
+ if(linkedTopic&&grades.includes(linkedTopic.grade))data.grade=linkedTopic.grade;
+ gradeInput.value=String(data.grade);
  for(const a of document.querySelectorAll('#navigation a')){
    const selected=a.hash==='#'+route||(route.startsWith('bai/')&&a.hash==='#lo-trinh');
    if(selected)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');

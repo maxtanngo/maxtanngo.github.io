@@ -640,8 +640,10 @@ function sources(){
  '<section class="panel"><p>Các bài học tóm tắt và đề mô phỏng trong ứng dụng do VietMath tự biên soạn.</p><ul class="source-list"><li><a href="https://moet.gov.vn/content/vanban/Lists/VBPQ/Attachments/1453/vbhn-322018-202021-ttbgddt-trinh-ky-xt.pdf">Chương trình Giáo dục phổ thông 2018</a></li><li><a href="https://vqa.moet.gov.vn/vi/news/thong-bao/cau-truc-dinh-dang-de-thi-tot-nghiep-thpt-tu-nam-2025-74.html">Cấu trúc đề thi tốt nghiệp THPT từ 2025</a></li><li><a href="https://vqa.moet.gov.vn/vi/news/tin-tuc-su-kien/de-thi-tham-khao-ky-thi-tot-nghiep-thpt-tu-nam-2025-159.html">Đề thi tham khảo của Bộ</a></li></ul></section>');
 }
 function render(){
- gradeInput.value=String(data.grade);
  const route=currentRoute();
+ const linkedTopic=route.startsWith('bai/')?byId.get(route.slice(4)):null;
+ if(linkedTopic&&grades.includes(linkedTopic.grade))data.grade=linkedTopic.grade;
+ gradeInput.value=String(data.grade);
  mockExam.detach();
  for(const a of document.querySelectorAll('#navigation a')){
    const selected=a.hash==='#'+route||(route==='thi-thu'&&a.hash==='#luyen-de')||(route.startsWith('bai/')&&a.hash==='#lo-trinh');

@@ -1,0 +1,33 @@
+.tutor{width:min(1120px,calc(100% - 36px));margin:0 auto;padding:44px 0 72px;color:#f0f5eb;font:15px/1.55 system-ui,sans-serif}
+.back-link{font-weight:700;color:#c9f465}
+.tutor-intro{margin-bottom:24px}
+.tutor h1{font-size:clamp(35px,6vw,62px);line-height:1.04;letter-spacing:-.05em;margin:4px 0 12px}
+.tutor h2{font-size:19px;margin:0 0 9px}
+.tutor p{margin:0 0 12px}
+.tutor .kicker{color:#c9f465;font-weight:750}
+.tutor-layout{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(245px,1fr);gap:16px;align-items:start}
+.tutor-panel{border:1px solid #3c4c3d;border-radius:16px;background:#151e17;padding:clamp(15px,2.5vw,25px);min-width:0}
+.tutor-controls{display:grid;grid-template-columns:minmax(64px,.55fr) repeat(2,minmax(0,1fr));gap:8px;margin-bottom:16px}
+.tutor label{display:block;font-weight:700}
+.tutor select,.tutor textarea,.tutor button{font:inherit;border:1px solid #587057;color:#f0f5eb;background:#202e23;border-radius:8px;padding:9px;min-height:44px}
+.tutor select,.tutor textarea{display:block;width:100%;margin-top:5px}
+.tutor textarea{resize:vertical}
+.tutor button{cursor:pointer;text-align:left}
+.tutor button:hover{background:#304433}
+.tutor button:disabled{opacity:.65;cursor:wait}
+.tutor .tutor-primary{background:#c9f465;color:#172015;border-color:#c9f465;font-weight:750}
+.tutor .tutor-primary:hover{background:#dbfa9a}
+.tutor :focus-visible{outline:2px solid #c9f465;outline-offset:3px}
+.tutor-actions{display:flex;flex-wrap:wrap;gap:8px;margin-block:10px 14px}
+.tutor .tutor-note{color:#bccab9;font-size:13px;margin-top:8px}
+.tutor-side h2:not(:first-child){margin-top:24px}
+#library{display:grid;gap:7px}
+#library button{background:transparent;font-size:14px}
+.tutor-turn{border-top:1px solid #435345;margin-top:18px;padding-top:15px;overflow-wrap:anywhere}
+.tutor-turn h2{font-size:17px}
+.tutor-turn .reply{white-space:pre-wrap;margin-top:8px}
+.tutor-turn a{color:#d9f9a3;text-decoration:underline}
+.tutor-turn details{margin:8px 0}
+.tutor-turn summary{cursor:pointer;color:#e5f6d5}
+.tutor-turn .answer-origin{font-size:12px;color:#bfd1bb}
+@media(max-width:760px){.tutor-layout{grid-template-columns:minmax(0,1fr)}.tutor{padding-top:28px}}
