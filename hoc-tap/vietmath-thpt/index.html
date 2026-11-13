@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Học Toán lớp 10, 11, 12 với lý thuyết, luyện tập, thi thử tốt nghiệp THPT và ôn câu sai.">
+<title>VietMath THPT — Toán cấp 3</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22%23c9f465%22%2F%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23142018%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%225%22%20d%3D%22M15%2044V20l12%2015%2012-15v24%22%2F%3E%3Ccircle%20cx%3D%2249%22%20cy%3D%2244%22%20r%3D%223%22%20fill%3D%22%233a6b40%22%2F%3E%3C%2Fsvg%3E">
+<style>
+:root{color-scheme:light;--ink:#19223a;--muted:#505a72;--line:#e2e4ee;--base:#f7f7fc;--surface:#fff;--primary:#4835a6;--tint:#ece8fb;--dark:#23174b;--green:#16654f;--red:#9c3144;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--base);line-height:1.55}a{color:inherit}button,input,select{font:inherit}button,select{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #6f50e4;outline-offset:3px}.wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}.top{border-bottom:1px solid var(--line);background:#fff}.top-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{text-decoration:none;display:flex;gap:10px;align-items:center;font-weight:750;white-space:nowrap;font-size:17px}.brand strong{color:var(--primary)}.mark{display:flex;align-items:center;justify-content:center;background:#c9f465;color:#142018;border-radius:11px;width:37px;height:37px;font-weight:850}.mark span{color:#3a6b40}.top nav{display:flex;gap:4px;align-items:center}.top nav a{font-size:14px;font-weight:650;padding:8px 12px;text-decoration:none;border-radius:9px;color:var(--muted);white-space:nowrap}.top nav a[aria-current]{background:var(--tint);color:var(--primary)}.grade-picker{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:650;color:var(--muted);white-space:nowrap}.grade-picker select,.filters select,.filters input{border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);padding:9px 12px}.skip{position:fixed;top:-80px;left:12px;padding:12px;background:white;z-index:3}.skip:focus{top:8px}main{min-height:65vh;padding-block:36px 50px}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.19;letter-spacing:-.025em}h1{font-size:clamp(32px,5vw,54px)}h2{font-size:clamp(23px,3vw,30px)}h3{font-size:17px}p+ p{margin-top:9px}.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,.7fr);min-height:290px;align-items:center;gap:28px;border-radius:24px;padding:clamp(24px,4vw,46px);background:linear-gradient(120deg,#211641,#38236a);color:#fff;overflow:hidden}.hero p{color:#e3dcf7;max-width:47ch;margin-block:11px 20px}.hero canvas{width:100%;height:auto;max-height:245px}.eyebrow{font-size:12px;font-weight:750;letter-spacing:.07em;color:var(--primary);text-transform:uppercase;margin-bottom:9px}.hero .eyebrow{color:#dbccff}.button{min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 15px;border-radius:10px;border:1px solid transparent;font-weight:750;font-size:14px;text-decoration:none;line-height:1.2}.primary{background:var(--primary);color:white}.primary:hover{background:#382786}.hero .primary{background:#e6dbff;color:#241449}.secondary{background:white;border-color:var(--line);color:var(--ink)}.secondary:hover{background:var(--tint)}.button:disabled{opacity:.5;cursor:default}.actions{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-top:16px}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-block:16px 32px}.stat,.panel,.topic,.mode{background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:18px}.stat strong{display:block;font-size:24px;letter-spacing:-.04em}.stat span,.muted,small{color:var(--muted)}.stat span{font-size:13px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:14px}.section-head p,.page-title p{margin-top:7px;color:var(--muted)}.filters{display:flex;gap:8px;flex-wrap:wrap}.filters input{width:min(240px,100%)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.topic{display:flex;flex-direction:column;gap:8px;min-height:154px}.topic h3{line-height:1.3}.tag{font-size:11px;font-weight:750;color:var(--primary)}.topic small{font-size:12px}.topic .actions{margin-top:auto}.text-link{color:var(--primary);font-weight:700;font-size:14px;text-decoration-thickness:1px;text-underline-offset:3px}.page-title{margin-bottom:20px}.page-title h1{font-size:clamp(30px,4vw,44px)}.reading{max-width:820px;margin:auto}.panel{padding:clamp(17px,3vw,28px);margin-bottom:14px}.panel h2{margin-bottom:10px}.formula{background:#f3effd;border-radius:11px;padding:14px;border-left:3px solid #8063cf}.panel .formula{margin-top:13px}.quiz-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;font-size:14px;font-weight:700;color:var(--muted)}progress{width:100%;height:8px;accent-color:var(--primary)}.prompt{font-size:clamp(19px,3vw,25px);margin:18px 0 14px}.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;border:0;margin:0;padding:0}.option{display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:12px;border-radius:11px;cursor:pointer}.option:has(input:checked){background:var(--tint);border-color:#8d7bd6}.option input{accent-color:var(--primary);flex:none}.answer-field{display:block;max-width:360px;width:100%;padding:12px;border:1px solid #9f9bb6;border-radius:10px}.help{margin-top:7px;font-size:13px;color:var(--muted)}.feedback{margin-top:14px;padding:13px 15px;border-radius:10px}.correct{background:#e8f7f0;color:var(--green)}.incorrect{background:#fff0f2;color:var(--red)}.result-score{font-size:38px;font-weight:850;letter-spacing:-.05em}.result-item{padding:12px 0;border-bottom:1px solid var(--line)}.result-item p{font-size:14px}.result-item:last-child{border-bottom:0}.mode .button{margin-top:12px}.mode p{margin-top:7px;color:var(--muted)}.mode-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.footer{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:14px 22px;padding:20px 0 30px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}.source-list li{margin-block:8px}.form-error{color:var(--red)}.visually-hidden{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden}
+@media(max-width:850px){.top-inner{flex-wrap:wrap;gap:4px 12px;padding-block:11px}.top nav{order:3;width:100%;justify-content:space-between}.top nav a{padding:8px 7px}.hero{min-height:0}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head{align-items:start;flex-direction:column}}
+@media(max-width:560px){.wrap{width:calc(100% - 28px)}main{padding-top:22px}.hero{grid-template-columns:minmax(0,1fr);gap:12px}.hero canvas{max-height:137px;object-fit:contain}.stats{gap:6px}.stat{padding:9px}.stat span{font-size:11px}.stat strong{font-size:20px}.grid,.mode-grid,.options{grid-template-columns:minmax(0,1fr)}.filters{width:100%}.filters input{width:100%}.grade-picker>span{display:none}.top nav a{font-size:12px}.brand{font-size:15px}.mark{width:31px;height:31px}.hero p{margin-bottom:9px}}
+
+@media(min-width:851px){.filters{flex-shrink:0}}
+.math-lab{border-color:#d8cef1;background:#fff}.math-lab h2{margin-bottom:8px}.lab-challenge{color:var(--muted)}.lab-visual{margin-top:16px;background:#f7f5fc;border:1px solid #e6e0f0;padding:clamp(12px,2.5vw,22px);border-radius:12px}.lab-visual canvas{display:block;width:100%;max-width:500px;height:auto;margin:auto}.lab-controls{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:12px}.lab-control{display:grid;gap:6px;min-width:min(185px,100%);flex:1;font-weight:650;font-size:14px}.lab-control input[type=range]{width:100%;accent-color:var(--primary);min-height:30px}.lab-control select{width:max-content;min-width:90px;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:white}.lab-status{padding:11px 13px;margin-top:10px;background:#ede8f9;border-radius:9px;color:#34216d;font-weight:600}.fraction-row{display:grid;grid-template-columns:46px minmax(0,1fr);gap:9px;align-items:center;font-weight:750}.fraction-row+.fraction-row{margin-top:10px}.fraction-bar{display:grid;min-height:33px;gap:2px}.fraction-bar span{background:#e1d9ee;border-radius:4px}.fraction-bar .filled{background:#6046b7}.coin-bars{display:grid;gap:11px}.coin-bars span{display:flex;justify-content:space-between}.coin-bars progress{height:13px}.math-lab .actions{margin:0}
+
+.footer-line{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;min-height:36px}.feedback-details{width:max-content;max-width:100%}.feedback-details summary{width:max-content;margin-left:auto;cursor:pointer;border:1px solid var(--line);background:white;border-radius:8px;padding:7px 12px;color:var(--primary);font-weight:750}.feedback-details summary:hover{background:var(--tint)}.feedback-details summary:focus-visible{outline:3px solid #6f50e4;outline-offset:3px}.feedback-contact{margin-top:8px;max-width:320px;padding:12px 15px;border-radius:10px;border:1px solid var(--line);background:white}.feedback-contact ul{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:4px}.feedback-contact a{color:var(--primary);display:inline-block;padding-block:3px;text-underline-offset:3px}@media(max-width:560px){.footer{grid-template-columns:1fr}.feedback-details summary{margin-left:0}}
+
+#lab-canvas{display:block;width:100%;max-width:600px;height:auto;background:#faf8ff;border:1px solid var(--line);border-radius:12px}
+#lab-parameter{display:block;width:min(100%,320px);accent-color:var(--primary)}
+.exam-banner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:var(--tint)}
+.mock-title{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+#mock-timer{background:var(--tint);color:var(--primary);border-radius:10px;padding:9px 13px;font-variant-numeric:tabular-nums;font-size:1.25rem}
+.mock-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(240px,1fr);gap:16px;align-items:start}
+.mock-options{display:grid;gap:12px;margin:16px 0}
+.mock-choice,.mock-statement{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0;min-inline-size:0}
+.mock-choice,.mock-statement label{cursor:pointer;min-height:44px}
+.mock-choice{display:flex;gap:8px;align-items:center}
+.mock-statement label{display:inline-flex;align-items:center;margin-right:18px;gap:5px}
+.mock-options input[type=radio]{accent-color:var(--primary)}
+.mock-number{width:min(100%,260px);padding:9px;border:1px solid var(--line);border-radius:8px}
+.mock-help{margin:0;color:var(--muted)}
+.mock-nav p{font-size:.92rem;font-weight:650;margin:12px 0 5px}
+.mock-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
+.mock-grid button{min-height:44px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink)}
+.mock-grid .answered{background:#def3e9;color:#115946}
+.mock-grid [aria-current=step]{outline:2px solid var(--primary);outline-offset:-2px;font-weight:800}
+#mock-submit{margin-top:18px}
+.mock-review{border-top:1px solid var(--line);padding:12px 0}
+.mock-review summary{cursor:pointer;font-weight:650}
+button:disabled{opacity:.55;cursor:default}
+@media(max-width:720px){.mock-layout{grid-template-columns:minmax(0,1fr)}}
+.exam-levels{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px;margin-top:20px}
+.exam-level{padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--base)}
+.exam-level h3{margin:0}
+.exam-level p{margin:6px 0 14px}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Đến nội dung</a>
+<header class="top"><div class="wrap top-inner">
+<a href="#lo-trinh" class="brand" aria-label="VietMath THPT, lộ trình"><span class="mark" aria-hidden="true">M<span>.</span></span><span>VietMath <strong>THPT</strong></span></a>
+<nav id="navigation" aria-label="Điều hướng chính">
+<a href="#lo-trinh">Lộ trình</a><a href="#luyen-de">Luyện đề</a><a href="#on-loi">Ôn câu sai</a><a href="#tien-do">Tiến độ</a>
+</nav>
+<label class="grade-picker"><span>Khối lớp</span><select id="grade"><option value="10">Lớp 10</option><option value="11">Lớp 11</option><option value="12">Lớp 12</option></select></label>
+</div></header>
+<main id="main" class="wrap" tabindex="-1"></main>
+<footer class="wrap footer">
+  <div class="footer-line"><a href="https://maxngo.io.vn/">VietMath THPT · MaxNgo</a><span>Tiến độ lưu trên trình duyệt này.</span><a href="#nguon">Nguồn nội dung</a></div>
+  <details class="feedback-details">
+    <summary>Góp ý</summary>
+    <div class="feedback-contact">
+      <p>Phụ huynh và học sinh có thể gửi góp ý về bài học hoặc báo lỗi.</p>
+      <ul>
+        <li><a href="mailto:Tannt4@gmail.com?subject=G%C3%B3p%20%C3%BD%20VietMath%20THPT">Tannt4@gmail.com</a></li>
+        <li><a href="tel:+84973333210">097.3333.210</a></li>
+        <li><a href="https://maxngo.io.vn/">MaxNgo.io.vn</a></li>
+      </ul>
+    </div>
+  </details>
+</footer>
+<script>
+const A='Số & Đại số', G='Hình học & Đo lường', D='Thống kê & Xác suất';
+const topics=[];
+const q=(prompt,answer,solution,hint,choices)=>({prompt,answer:String(answer),solution,hint,choices});
+const mc=(prompt,answer,others,solution,hint)=>q(prompt,answer,solution,hint,[answer,...others].map(String));
+const f=(a,b)=>a+'/'+b;
+const lesson=(grade,id,strand,title,rule,...examples)=>topics.push({grade,id,strand,title,rule,examples});
+
+lesson(10,'sets',A,'Mệnh đề và tập hợp','Phủ định của “mọi” là “tồn tại ít nhất một … không”. Giao tập hợp lấy các phần tử chung, hợp lấy tất cả phần tử.',
+ n=>q(`A={1; 2; …; ${n+4}}, B={${n}; ${n+1}; …; ${n+6}}. A ∩ B có bao nhiêu phần tử?`,5,`Giao gồm các số từ ${n} đến ${n+4}, có 5 phần tử.`,'Tìm phần chung của hai khoảng số nguyên.'),
+ ()=>mc('Phủ định của “Mọi học sinh đều nộp bài” là gì?','Có ít nhất một học sinh chưa nộp bài',['Mọi học sinh đều chưa nộp bài','Có học sinh đã nộp bài','Không có học sinh nào'],'Để phủ định mệnh đề với “mọi”, chỉ cần một phản ví dụ.','Đổi “mọi” thành “tồn tại”.'),
+ n=>q(`Hai tập có ${n+3} và ${n+2} phần tử, giao có ${n} phần tử. Hợp có bao nhiêu phần tử?`,n+5,'Cộng số phần tử hai tập rồi trừ số phần tử chung.','Phần giao bị đếm hai lần.'));
+lesson(10,'linear-region',A,'Bất phương trình bậc nhất hai ẩn','Đường biên ax + by = c chia mặt phẳng thành hai nửa. Thử một điểm ngoài đường biên để chọn miền nghiệm; dấu ≤ hoặc ≥ lấy cả đường biên.',
+ n=>mc(`Điểm nào thỏa x + y ≤ ${n}?`,`(${n}; 0)`,[`(${n+1}; 0)`,`(0; ${n+2})`,`(${n}; 1)`],'Thay tọa độ vào vế trái. Chỉ điểm có tổng bằng n thỏa.','Dấu ≤ bao gồm trường hợp bằng.'),
+ n=>q(`Miền x ≥ 0, y ≥ 0, x + y ≤ ${n}. Giá trị lớn nhất của 2x + y là bao nhiêu?`,2*n,`2x+y ≤ 2(x+y) ≤ ${2*n}; đạt tại (${n};0).`,'Thử các đỉnh của miền tam giác.'),
+ n=>q(`Tại giao của x+y=${n+3} và y=3, x bằng bao nhiêu?`,n,'Thế y=3 vào đường biên rồi trừ 3.','Dùng phép thế.'));
+lesson(10,'quadratic10',A,'Hàm số và tam thức bậc hai','Đỉnh của y = ax² + bx + c có hoành độ −b/(2a). Dấu của tam thức phụ thuộc hệ số a và các nghiệm thực.',
+ n=>q(`Tìm hoành độ đỉnh của y=x²−${2*n}x+1.`,n,'Hoành độ đỉnh bằng −b/(2a).','Ở đây a=1.'),
+ n=>q(`Tìm giá trị nhỏ nhất của y=(x−${n})²+3.`,3,'Bình phương không âm và bằng 0 tại x='+n+'.','Tìm khi bình phương bằng 0.'),
+ n=>mc(`Khi nào (x−${n})(x−${n+2}) < 0?`,`${n} < x < ${n+2}`,[`x < ${n}`,`x > ${n+2}`,'Mọi x'],'Giữa hai nghiệm, hai nhân tử trái dấu.','Lập bảng dấu của hai nhân tử.'));
+lesson(10,'trig10',G,'Hệ thức lượng trong tam giác','Định lí cosin: a²=b²+c²−2bc cos A. Diện tích bằng một nửa tích hai cạnh với sin góc xen giữa.',
+ n=>q(`Tam giác có b=${3*n}, c=${4*n}, A=90°. Tính cạnh a.`,5*n,'cos 90°=0 nên dùng bộ cạnh 3–4–5 cùng tỉ lệ.','Áp dụng định lí cosin.'),
+ n=>q(`Hai cạnh dài ${2*n} và 6, góc xen giữa 30°. Tính diện tích.`,3*n,'S=½·'+2*n+'·6·½.','sin 30°=1/2.'),
+ ()=>q('Tính cos 120° (có thể nhập phân số).','-1/2','cos(180°−60°)=−cos 60°=−1/2.','Cos của góc tù mang dấu âm.'));
+lesson(10,'vectors10',G,'Vectơ và tích vô hướng','Tích vô hướng của (a,b) và (c,d) bằng ac+bd. Hai vectơ khác vectơ không vuông góc khi tích vô hướng bằng 0.',
+ n=>q(`Tính tích vô hướng của (${n}; 2) và (3; −1).`,3*n-2,'Nhân tọa độ tương ứng rồi cộng.','Tính n×3 + 2×(−1).'),
+ n=>q(`A=(1; 2), B=(${n+1}; 4). Tìm hoành độ vectơ AB.`,n,'Lấy tọa độ điểm cuối trừ điểm đầu.','Hoành độ là xB−xA.'),
+ n=>q(`Tìm k để (2; k) vuông góc với (${n}; 1).`,-2*n,'Tích vô hướng bằng 2·'+n+'+k. Đặt bằng 0.','Hai vectơ không bằng vectơ không.'));
+lesson(10,'coordinates10',G,'Đường thẳng, đường tròn và conic','Đường tròn tâm (a,b), bán kính R có phương trình (x−a)²+(y−b)²=R². Phương trình đường thẳng tổng quát ax+by+c=0 có vectơ pháp tuyến (a,b).',
+ n=>q(`Tính bán kính đường tròn (x−1)²+(y+2)²=${n*n}.`,n,'Vế phải là bình phương bán kính.','Lấy căn dương.'),
+ n=>q(`Tìm tung độ giao điểm của x+2y−${2*n}=0 với trục tung.`,n,'Trên trục tung x=0, nên 2y='+2*n+'.','Thế x=0.'),
+ ()=>mc('Conic có phương trình x²/9 + y²/4 = 1 là gì?','Elip',['Parabol','Hyperbol','Đường thẳng'],'Đây là dạng chính tắc của elip với hai mẫu số dương khác nhau.','Xét dấu cộng và các mẫu dương.'));
+lesson(10,'combinatorics10',D,'Quy tắc đếm, tổ hợp và nhị thức','Nhân số cách khi các công đoạn nối tiếp. Tổ hợp không xét thứ tự; chỉnh hợp có xét thứ tự.',
+ n=>q(`Có ${n} áo và 4 quần. Chọn một áo và một quần có bao nhiêu cách?`,4*n,'Mỗi áo kết hợp với 4 quần, dùng quy tắc nhân.','Có hai công đoạn.'),
+ n=>q(`Chọn 2 bạn từ ${n+3} bạn, không xét thứ tự. Có bao nhiêu cách?`,(n+3)*(n+2)/2,'Dùng C(m,2)=m(m−1)/2.','Mỗi cặp không thứ tự bị đếm hai lần khi chọn lần lượt.'),
+ n=>q(`Hệ số của x trong (1+x)^${n} là bao nhiêu?`,n,'Chọn đúng một thừa số x từ '+n+' thừa số.','Hệ số là C(n,1).'));
+lesson(10,'data10',D,'Mẫu số liệu, số trung bình và độ phân tán','Số trung bình là tổng chia số quan sát. Khoảng biến thiên bằng giá trị lớn nhất trừ nhỏ nhất. Trung vị nằm ở giữa dãy đã sắp.',
+ n=>q(`Tìm trung bình của ${n}; ${n+3}; ${n+6}.`,n+3,'Cộng ba giá trị, chia 3.','Dãy cách đều nên trung bình là giá trị giữa.'),
+ n=>q(`Tìm khoảng biến thiên của ${n}; ${n+2}; ${n+9}.`,9,'Lấy '+(n+9)+' trừ '+n+'.','Dùng hai giá trị cực biên.'),
+ n=>q(`Tìm trung vị của ${n+4}; ${n}; ${n+3}; ${n+2}; ${n+9}.`,n+3,'Sắp thứ tự rồi chọn giá trị đứng thứ ba.','Sắp dữ liệu trước khi lấy trung vị.'));
+lesson(10,'prob10',D,'Xác suất cổ điển','Với các kết quả đồng khả năng, xác suất bằng số kết quả thuận lợi chia tổng số kết quả có thể.',
+ n=>q(`Hộp có ${n} bi đỏ và ${3*n} bi xanh. Lấy đều ngẫu nhiên một bi. Xác suất lấy bi đỏ?`,'1/4','Có '+n+' bi đỏ trên tổng '+4*n+' bi.','Đếm trên toàn bộ hộp.'),
+ ()=>q('Gieo hai xúc xắc cân đối độc lập. Xác suất tổng bằng 7?','1/6','Có 6 cặp có tổng 7 trên 36 cặp.','Liệt kê từ (1;6) đến (6;1).'),
+ ()=>q('Gieo xúc xắc cân đối. Xác suất ra số lớn hơn 4?','1/3','Hai mặt 5 và 6 thuận lợi trong sáu mặt.','Đếm các kết quả thỏa bất đẳng thức.'));
+
+lesson(11,'trig11',A,'Hàm số và phương trình lượng giác','Dùng đường tròn lượng giác để đọc dấu. Phương trình sin x=0 có nghiệm x=kπ với k nguyên.',
+ n=>q(`Trong đoạn [0; ${n}π], phương trình sin x=0 có bao nhiêu nghiệm?`,n+1,'Các nghiệm là kπ với k từ 0 đến '+n+', kể cả hai đầu mút.','Đếm cả nghiệm x=0.'),
+ ()=>q('Tính sin(5π/6).','1/2','sin(π−π/6)=sin(π/6)=1/2.','Góc ở góc phần tư II.'),
+ ()=>mc('Chu kì dương nhỏ nhất của y = cos x?','2π',['π','π/2','4π'],'Giá trị cos lặp lại sau một vòng tròn.','Một vòng bằng 2π radian.'));
+lesson(11,'sequences11',A,'Dãy số, cấp số cộng và cấp số nhân','Cấp số cộng có uₙ=u₁+(n−1)d. Cấp số nhân có uₙ=u₁qⁿ⁻¹.',
+ n=>q(`Cấp số cộng có u₁=${n}, d=3. Tính u₅.`,n+12,'Từ u₁ tới u₅ có bốn lần cộng công sai.','Dùng n−1 bước.'),
+ n=>q(`Cấp số nhân có u₁=${n}, q=2. Tính u₄.`,8*n,'Nhân u₁ với 2³.','Từ số hạng thứ nhất đến thứ tư có ba bước.'),
+ n=>q(`Tính tổng bốn số hạng đầu của cấp số cộng u₁=${n}, d=2.`,4*n+12,'Các số là n, n+2, n+4, n+6.','Có thể dùng 4(u₁+u₄)/2.'));
+lesson(11,'limits11',A,'Giới hạn và tính liên tục','Có thể thay trực tiếp vào hàm liên tục. Với dạng 0/0, thử phân tích nhân tử hoặc rút gọn trước khi lấy giới hạn.',
+ n=>q(`Tính giới hạn (x²−${n*n})/(x−${n}) khi x tiến tới ${n}.`,2*n,'Với x khác '+n+', rút gọn thành x+'+n+', rồi lấy giới hạn.','Phân tích hiệu hai bình phương.'),
+ n=>q(`Tính giới hạn (${n}x+1)/(2x−1) khi x tiến tới +∞.`,f(n,2),'Chia cả tử và mẫu cho x, các số hạng 1/x tiến về 0.','So hệ số của bậc cao nhất.'),
+ n=>q(`Tìm giá trị f(${n}) để f liên tục tại x=${n}, biết f(x)=x+2 khi x≠${n}.`,n+2,'Giá trị tại điểm phải bằng giới hạn tại điểm.','Tính giới hạn của x+2.'));
+lesson(11,'exp11',A,'Hàm số mũ và lôgarit','logₐ b=c khi aᶜ=b với a>0, a≠1 và b>0. Khi lấy log cần kiểm tra biểu thức trong log dương.',
+ n=>q(`Giải 2ˣ=${2**n}. Nhập x.`,n,'Đưa hai vế về cùng cơ số 2.','Hàm mũ cơ số 2 là đơn điệu.'),
+ n=>q(`Tính log₃(${3**n}).`,n,'Vì '+3**n+'=3^'+n+'.','Đọc số mũ của cơ số 3.'),
+ n=>mc(`Điều kiện để log₂(x−${n}) xác định?`,`x > ${n}`,[`x ≥ ${n}`,`x < ${n}`,'Mọi x'],'Biểu thức trong log phải dương nghiêm ngặt.','Số 0 không thuộc tập xác định.'));
+lesson(11,'derivative11',A,'Đạo hàm và tiếp tuyến','Đạo hàm xⁿ là nxⁿ⁻¹. Hệ số góc tiếp tuyến tại x₀ bằng f′(x₀).',
+ n=>q(`Tính f′(${n}) với f(x)=x²+3x.`,2*n+3,'f′(x)=2x+3; thay x='+n+'.','Đạo hàm từng hạng tử.'),
+ n=>q(`Hệ số góc tiếp tuyến của y=x³ tại x=${n}?`,3*n*n,'Đạo hàm bằng 3x².','Thế hoành độ vào đạo hàm.'),
+ n=>q(`Vị trí s(t)=t²+${n}t. Tốc độ tức thời tại t=2 bằng bao nhiêu?`,n+4,'Vận tốc s′(t)=2t+'+n+'; thay t=2.','Đạo hàm của quãng đường theo thời gian.'));
+lesson(11,'parallel11',G,'Quan hệ song song trong không gian','Nếu đường thẳng không nằm trong mặt phẳng và song song với một đường thẳng của mặt phẳng thì song song với mặt phẳng.',
+ ()=>mc('Đường d nằm ngoài (P) và song song với a nằm trong (P). Kết luận gì?','d song song với (P)',['d nằm trong (P)','d vuông góc với (P)','d cắt (P)'],'Áp dụng dấu hiệu đường thẳng song song mặt phẳng.','Chú ý d nằm ngoài mặt phẳng.'),
+ n=>q(`Hình lăng trụ đứng có cạnh bên dài ${n}. Khoảng cách giữa hai đáy là bao nhiêu?`,n,'Cạnh bên vuông góc với hai đáy nên là chiều cao.','Hai mặt đáy song song.'),
+ ()=>mc('Qua điểm A ngoài mặt phẳng (P), có bao nhiêu mặt phẳng song song với (P)?','Một',['Không có','Hai','Vô số'],'Qua một điểm ngoài mặt phẳng có duy nhất một mặt phẳng song song với mặt phẳng đã cho.','Xét tính duy nhất.'));
+lesson(11,'perpendicular11',G,'Vuông góc, khoảng cách và thể tích','Đường thẳng vuông góc hai đường cắt nhau của một mặt phẳng thì vuông góc với mặt phẳng. Thể tích chóp bằng một phần ba tích diện tích đáy và chiều cao.',
+ n=>q(`Hình chóp có diện tích đáy ${3*n}, chiều cao 4. Tính thể tích.`,4*n,'V=⅓·'+3*n+'·4.','Nhớ hệ số 1/3.'),
+ n=>q(`Hình lập phương cạnh ${n}. Khoảng cách giữa hai mặt đối diện?`,n,'Một cạnh nối hai mặt đối diện vuông góc với cả hai mặt.','Tìm đoạn vuông góc chung.'),
+ n=>q(`Lăng trụ có diện tích đáy ${n+2}, chiều cao 5. Tính thể tích.`,5*(n+2),'Nhân diện tích đáy với chiều cao.','Dùng V=S·h.'));
+lesson(11,'grouped11',D,'Số liệu ghép nhóm','Ước lượng trung bình bằng tổng các tích giá trị đại diện của nhóm với tần số, chia tổng tần số. Giá trị đại diện là trung điểm nhóm.',
+ n=>q(`Giá trị đại diện của nhóm [${n}; ${n+8}) là bao nhiêu?`,n+4,'Lấy trung điểm của hai đầu mút.','Cộng hai đầu mút rồi chia 2.'),
+ n=>q(`Hai nhóm có giá trị đại diện ${n} và ${n+4}, tần số lần lượt 3 và 1. Trung bình xấp xỉ?`,n+1,'Tính trung bình có trọng số: (3n+n+4)/4.','Nhân giá trị đại diện với tần số tương ứng.'),
+ ()=>q('Nhóm [20;30) có độ dài bằng bao nhiêu?',10,'Độ dài nhóm là 30−20.','Dùng hiệu hai đầu mút.'));
+lesson(11,'prob11',D,'Biến cố độc lập, hợp và giao','Nếu A và B độc lập thì P(A∩B)=P(A)P(B). Với mọi A,B, P(A∪B)=P(A)+P(B)−P(A∩B).',
+ ()=>q('A, B độc lập, P(A)=1/2 và P(B)=1/3. Tính P(A∩B).','1/6','Nhân hai xác suất do hai biến cố độc lập.','Dùng quy tắc nhân.'),
+ ()=>q('P(A)=0,4, P(B)=0,5 và P(A∩B)=0,2. Tính P(A∪B).',0.7,'Cộng 0,4 và 0,5, trừ phần giao 0,2.','Phần giao bị đếm hai lần.'),
+ ()=>q('Xác suất A xảy ra là 0,3. Xác suất biến cố đối của A?',0.7,'Hai biến cố bù nhau có tổng xác suất 1.','Tính 1−P(A).'));
+
+lesson(12,'variation12',A,'Đạo hàm, biến thiên và cực trị','Dùng dấu f′ để xét đồng biến, nghịch biến. Nếu f′ đổi dấu từ âm sang dương qua x₀ thì x₀ là điểm cực tiểu.',
+ n=>q(`Tìm hoành độ cực tiểu của y=x²−${2*n}x+1.`,n,'f′=2x−'+2*n+'; đạo hàm đổi dấu từ âm sang dương tại x='+n+'.','Giải f′=0 rồi xét dấu.'),
+ n=>q(`Tìm giá trị lớn nhất của y=−(x−${n})²+7.`,7,'Phần âm của bình phương không dương và bằng 0 khi x='+n+'.','Xét giá trị lớn nhất của phần −(x−n)².'),
+ ()=>mc('f′ đổi dấu từ dương sang âm qua x₀. Kết luận gì?','Cực đại tại x₀',['Cực tiểu tại x₀','Luôn đồng biến','Luôn nghịch biến'],'Hàm tăng trước x₀ rồi giảm sau x₀.','Theo dõi hướng đổi dấu.'));
+lesson(12,'asymptote12',A,'Tiệm cận và khảo sát đồ thị','Nếu giới hạn khi x tiến tới ±∞ bằng b thì y=b là tiệm cận ngang. Nếu một giới hạn một phía tại a vô hạn thì x=a là tiệm cận đứng.',
+ n=>q(`Tung độ tiệm cận ngang của y=(${n}x+1)/(x−2)?`,n,'Chia tử mẫu cho x, giới hạn bằng hệ số bậc nhất của tử chia hệ số bậc nhất của mẫu.','So hệ số của x.'),
+ n=>q(`Hoành độ tiệm cận đứng của y=1/(x−${n})?`,n,'Mẫu tiến về 0, tử bằng 1 nên giới hạn một phía vô hạn.','Giải x−n=0.'),
+ n=>q(`Hệ số góc tiệm cận xiên của y=${n}x+2+1/x?`,n,'Hiệu giữa hàm và đường thẳng nx+2 tiến về 0.','Số hạng 1/x tiến về 0.'));
+lesson(12,'optimization12',A,'Tối ưu hóa bằng đạo hàm','Lập hàm mục tiêu theo một biến, xác định miền giá trị và so sánh tại điểm tới hạn cùng các đầu mút phù hợp.',
+ n=>q(`Hình chữ nhật có chu vi ${8*n}. Tính diện tích lớn nhất.`,4*n*n,`Tổng hai cạnh là ${4*n}; tích lớn nhất khi hai cạnh bằng ${2*n}.`,'Viết diện tích x(4n−x).'),
+ n=>q(`Trên [0; ${2*n}], tìm x làm lớn nhất x(${2*n}−x).`,n,'Hàm bậc hai mở xuống đạt lớn nhất tại đỉnh x='+n+'.','Lấy đạo hàm và giải bằng 0.'),
+ n=>q(`Chi phí C(x)=x²−${2*n}x+100. Tại x nào chi phí nhỏ nhất?`,n,'C′=2x−'+2*n+', đổi dấu từ âm sang dương tại x='+n+'.','Tìm đỉnh hoặc dùng đạo hàm.'));
+lesson(12,'integral12',A,'Nguyên hàm, tích phân và ứng dụng','Nếu F′=f thì tích phân từ a đến b của f bằng F(b)−F(a). Diện tích hình phẳng dùng tích phân của giá trị tuyệt đối hiệu hai đồ thị.',
+ n=>q(`Tính ∫₀^${n} 2x dx.`,n*n,'Nguyên hàm 2x là x². Thay cận trên rồi trừ cận dưới.','Dùng F(b)−F(a).'),
+ n=>q(`Tính diện tích giới hạn bởi y=2x, trục hoành, x=0 và x=${n}.`,n*n,'Trên đoạn này 2x≥0, nên S=∫ 2x dx với hai cận đã cho.','Hàm ở phía trên trục hoành.'),
+ n=>q(`Quay hình dưới y=${n} trên đoạn [0;2] quanh trục Ox. Thể tích bằng bao nhiêu lần π?`,2*n*n,'V=π∫ y² dx, với y²='+n*n+' và đoạn dài 2.','Bình phương bán kính lát cắt.'));
+lesson(12,'vectors12',G,'Vectơ và tọa độ trong không gian Oxyz','Độ dài vectơ (x,y,z) là √(x²+y²+z²). Tích vô hướng là tổng tích ba cặp tọa độ.',
+ n=>q(`Tính độ dài vectơ (${3*n}; ${4*n}; 0).`,5*n,'Áp dụng công thức căn tổng bình phương.','Dùng bộ 3–4–5.'),
+ n=>q(`Tính tích vô hướng của (${n}; 2; 1) và (2; −1; 3).`,2*n+1,'Tích bằng 2n−2+3.','Nhân từng cặp tọa độ.'),
+ n=>q(`A=(1; 2; 3), B=(${n+1}; 2; 3). Độ dài AB là bao nhiêu?`,n,'Chỉ hoành độ thay đổi, hiệu bằng '+n+'.','Hai điểm có cùng tung độ và cao độ.'));
+lesson(12,'space12',G,'Mặt phẳng, đường thẳng và mặt cầu','Mặt phẳng ax+by+cz+d=0 có pháp tuyến (a,b,c). Mặt cầu tâm I(a,b,c), bán kính R có tổng ba bình phương khoảng cách tọa độ bằng R².',
+ n=>q(`Khoảng cách từ O đến mặt phẳng z−${n}=0?`,n,'Mặt phẳng song song Oxy, chân chiếu của O là (0;0;'+n+').','Khoảng cách là độ chênh cao độ.'),
+ n=>q(`Tìm bán kính mặt cầu x²+y²+(z−1)²=${n*n}.`,n,'Vế phải bằng R².','Lấy căn dương.'),
+ n=>q(`Đường thẳng x=1+t, y=2, z=3. Tại t=${n}, x bằng bao nhiêu?`,n+1,'Thế tham số t='+n+' vào biểu thức x.','Các tọa độ phụ thuộc tham số t.'));
+lesson(12,'grouped12',D,'Độ phân tán của mẫu số liệu ghép nhóm','Phương sai xấp xỉ là trung bình có trọng số của bình phương độ lệch. Độ lệch chuẩn bằng căn bậc hai của phương sai.',
+ n=>q(`Phương sai của một mẫu là ${n*n}. Độ lệch chuẩn?`,n,'Độ lệch chuẩn bằng căn dương của phương sai.','Lấy căn bậc hai.'),
+ n=>q(`Tứ phân vị Q₁=${n}, Q₃=${n+8}. Khoảng tứ phân vị?`,8,'Khoảng tứ phân vị bằng Q₃−Q₁.','Lấy hiệu, không lấy trung bình.'),
+ ()=>mc('Đơn vị của độ lệch chuẩn của chiều cao đo bằng cm là gì?','cm',['cm²','cm³','Không có đơn vị'],'Phương sai có đơn vị cm², lấy căn cho đơn vị cm.','Độ lệch chuẩn dùng cùng đơn vị dữ liệu.'));
+lesson(12,'bayes12',D,'Xác suất có điều kiện và Bayes','P(A|B)=P(A∩B)/P(B), với P(B)>0. Công thức xác suất toàn phần cộng các nhánh. Bayes đảo điều kiện bằng cách chia xác suất giao cho xác suất biến cố đã biết.',
+ ()=>q('P(A∩B)=0,15; P(B)=0,5. Tính P(A|B).',0.3,'Lấy 0,15 chia 0,5.','Mẫu số là xác suất của điều kiện B.'),
+ ()=>q('Hai nguồn A và B chiếm 40% và 60%. Tỉ lệ lỗi tương ứng 10% và 20%. Xác suất lấy sản phẩm lỗi?',0.16,'P(lỗi)=0,4·0,1+0,6·0,2=0,16.','Cộng hai xác suất theo từng nhánh.'),
+ ()=>q('Nguồn A chiếm 40%, có tỉ lệ lỗi 10%; nguồn B chiếm 60%, có tỉ lệ lỗi 20%. Biết sản phẩm lỗi, xác suất nó từ A?',0.25,'P(A∩lỗi)=0,04 và P(lỗi)=0,16. Chia được 0,25.','Dùng công thức Bayes.'));
+
+const content=topics.map(t=>({...t,examples:t.examples.map((make,i)=>make(3+i))}));
+if(typeof module!=='undefined')module.exports={topics,content};
+
+</script>
+<script>
+const mathLabs=(()=>{
+ const configs={
+  quadratic10:{name:'Dịch chuyển đỉnh parabol',symbol:'h',min:-3,max:3,value:1,fn:(x,k)=>(x-k)**2-2,
+   note:k=>'y = (x − h)² − 2. Đỉnh ('+k+'; −2), trục đối xứng x = '+k+'.'},
+  exp11:{name:'Thay đổi cơ số hàm mũ',symbol:'a',min:.5,max:3,step:.1,value:2,fn:(x,k)=>k**x,
+   note:k=>'y = aˣ với a = '+k.toLocaleString('vi-VN')+'. Đồ thị đi qua (0; 1) và '+(k===1?'nằm ngang khi a = 1.':k<1?'nghịch biến.':'đồng biến.')},
+  derivative11:{name:'Tìm hệ số góc tiếp tuyến',symbol:'x₀',min:-2,max:2,step:.25,value:1,fn:x=>x*x,
+   tangent:(x,k)=>2*k*(x-k)+k*k,note:k=>'y = x². Tại x₀ = '+k+', tiếp tuyến có hệ số góc '+2*k+'.'},
+  variation12:{name:'Đọc khoảng đồng biến và nghịch biến',symbol:'a',min:1,max:4,step:1,value:2,fn:(x,k)=>(x**3-3*k*k*x)/12,
+   note:k=>'y = (x³ − 3a²x)/12. Hàm giảm giữa −'+k+' và '+k+', tăng ở hai khoảng ngoài.'}
+ };
+ function markup(id){
+  const t=configs[id];
+  return t?`<section class="panel"><h2>${t.name}</h2><label for="lab-parameter">Kéo để đổi ${t.symbol}</label><input id="lab-parameter" type="range" min="${t.min}" max="${t.max}" step="${t.step||1}" value="${t.value}"><p id="lab-note" aria-live="polite"></p><canvas id="lab-canvas" width="600" height="250" aria-hidden="true"></canvas></section>`:'';
+ }
+ function bind(id){
+  const t=configs[id], slider=document.getElementById('lab-parameter');
+  if(!t||!slider)return;
+  const canvas=document.getElementById('lab-canvas'),ctx=canvas.getContext('2d'),note=document.getElementById('lab-note');
+  function draw(){
+   const k=Number(slider.value), scale=29;
+   note.textContent=t.note(k);
+   ctx.clearRect(0,0,600,250);
+   ctx.save();
+   ctx.translate(300,125);
+   for(let i=-10;i<=10;i++){
+    const v=i*scale;
+    ctx.strokeStyle=i===0?'#766b8f':'#e5dfef';
+    ctx.beginPath();ctx.moveTo(v,-125);ctx.lineTo(v,125);
+    ctx.moveTo(-300,v);ctx.lineTo(300,v);ctx.stroke();
+   }
+   for(const [fn,color] of [[t.fn,'#6544ae'],[t.tangent,'#a13e28']]){
+    if(!fn)continue;
+    ctx.strokeStyle=color;ctx.lineWidth=3;ctx.beginPath();
+    for(let px=-300;px<=300;px++){
+     const y=-scale*fn(px/scale,k);
+     if(px===-300)ctx.moveTo(px,y);else ctx.lineTo(px,y);
+    }
+    ctx.stroke();
+   }
+   ctx.restore();
+  }
+  slider.addEventListener('input',draw);draw();
+ }
+ return {byGrade:{10:'quadratic10',11:'exp11',12:'variation12'},markup,bind};
+})();
+
+</script>
+<script>
+const examLevels=(()=>{
+ const bands=['Cơ bản','Vận dụng','Nâng cao'];
+ const mc=(prompt,answer,options,solution)=>({part:0,prompt,answer:String(answer),options:[answer,...options].map(String),solution});
+ const tf=(prompt,statements)=>({part:1,prompt,statements});
+ const short=(prompt,answer,solution)=>({part:2,prompt,answer,solution});
+ function apply(questions,version){
+  const code=Number(version), band=Math.floor((code-1)/3);
+  if(!band)return questions;
+  const n=2+(code-1)%3;
+  const a=band===2;
+  questions[0]=a
+   ?mc(`Có bao nhiêu số nguyên m để y=x³−3mx²+${3*n*n}x đồng biến trên ℝ?`,2*n+1,[2*n,2*n-1,2*n+2],`Đạo hàm bằng 3[(x−m)²+${n*n}−m²]. Điều kiện |m|≤${n}, kể cả hai đầu vì đạo hàm chỉ bằng 0 tại một điểm.`)
+   :mc(`Đồ thị y=x³−${3*n*n}x+c có hai cực trị. Hiệu giá trị cực đại và cực tiểu là bao nhiêu?`,4*n**3,[2*n**3,3*n**3,n**3],`Các hoành độ cực trị là ±${n}. Hiệu f(−${n})−f(${n}) bằng ${4*n**3}, độc lập với c.`);
+  questions[1]=mc(`Có bao nhiêu tiệm cận đứng của y=(x−${n})/((x−${n})(x+${n}))?`,1,[0,2,3],`Rút gọn còn 1/(x+${n}) trên tập xác định. Giới hạn tại ${n} hữu hạn; chỉ x=−${n} là tiệm cận đứng.`);
+  questions[2]=mc(`Tìm giá trị lớn nhất của f(x)=x(${2*n}−x) trên [${n+1}; ${2*n}].`,n*n-1,[n*n,0,n*n-2],`Đỉnh ở x=${n} ngoài đoạn. Hàm giảm trên đoạn nên giá trị lớn nhất đạt tại x=${n+1}.`);
+  questions[3]=mc(`Cho F′(x)=${n}x² và F(0)=3. Tính F(3).`,9*n+3,[9*n,27*n+3,3*n+3],`F(x)=${n}x³/3+3.`);
+  questions[4]=mc(`Diện tích giữa y=x−${n} và trục Ox trên [0; ${2*n}] bằng bao nhiêu?`,n*n,[0,2*n*n,n*n/2],`Đồ thị cắt trục tại ${n}. Hai tam giác có tổng diện tích ${n*n}.`);
+  questions[5]=mc(`Hai vectơ (1; m; ${n}) và (2; −1; ${n}) vuông góc. Tìm m.`,n*n+2,[n*n-2,-(n*n+2),n+2],`Tích vô hướng bằng 2−m+${n*n}=0.`);
+  questions[6]=mc(`Mặt cầu tâm (0; 0; ${n}) tiếp xúc mặt phẳng 2x+2y+z=0. Bán kính bằng bao nhiêu?`,`${n}/3`,[n,`${n}/2`,3*n],`Khoảng cách từ tâm đến mặt phẳng bằng ${n}/√(4+4+1).`);
+  questions[7]=mc(`Mẫu ghép nhóm có hai giá trị đại diện 1 và ${2*n+1}, mỗi nhóm cùng tần số. Phương sai ước lượng là bao nhiêu?`,n*n,[n,2*n*n,n*n+1],`Trung bình là ${n+1}. Hai độ lệch là ±${n}; bình phương rồi lấy trung bình.`);
+  questions[8]=mc(`Một thùng có ${n} bi đỏ và ${2*n} bi trắng. Lấy liên tiếp hai bi không hoàn lại. Biết bi đầu màu đỏ, xác suất bi sau màu trắng là bao nhiêu?`,`${2*n}/${3*n-1}`,['2/3',`${n-1}/${3*n-1}`,`${2*n-1}/${3*n-1}`],`Sau lượt đầu còn ${2*n} bi trắng trong ${3*n-1} bi.`);
+  questions[9]=mc(`Một lượng tiền ban đầu là ${n} triệu đồng, tăng 10% mỗi năm theo lãi kép. Sau 2 năm có bao nhiêu triệu đồng?`,Number((1.21*n).toFixed(2)),[1.2*n,1.1*n,1.02*n].map(x=>Number(x.toFixed(2))),`Nhân số tiền ban đầu với (1+0,1)².`);
+  questions[10]=mc(`Có ${n} học sinh lớp A và ${n+2} học sinh lớp B. Chọn một nhóm hai người có cả hai lớp. Có bao nhiêu cách?`,n*(n+2),[2*n+1,2*n*(n+2),n*(n+1)],'Chọn một bạn từ mỗi lớp theo quy tắc nhân.');
+  questions[11]=mc(`Đường thẳng (x; y; z)=(1+t; 2; ${n}−t) gặp mặt phẳng x+2z=1 tại điểm có hoành độ bao nhiêu?`,2*n+1,[2*n-1,n,1],`Thay vào phương trình mặt phẳng được 1+2×${n}−t=1.`);
+  questions[12]=tf(`Xét f(x)=x+${n*n}/x với x>0.`,[
+   [`f′(x)=1−${n*n}/x².`,true,'Lấy đạo hàm x và 1/x.'],
+   [`Hàm số tăng trên (0; ${n}).`,false,'Đạo hàm âm trong khoảng đó.'],
+   [`Giá trị nhỏ nhất bằng ${2*n}.`,true,`Tại x=${n}, đạo hàm đổi dấu từ âm sang dương.`],
+   [`Đường y=${2*n+1} cắt đồ thị đúng một điểm trên x>0.`,false,'Giá trị này lớn hơn cực tiểu và cả hai nhánh đều tiến tới +∞.']
+  ]);
+  questions[13]=tf(`Xét hình phẳng giới hạn bởi y=x², y=${n}x với x∈[0; ${n}].`,[
+   [`Hai đồ thị gặp nhau tại x=0 và x=${n}.`,true,'Giải x(x−n)=0.'],
+   ['Parabol nằm phía trên đường thẳng trong miền giữa hai giao điểm.',false,'x(n−x)>0 trong khoảng.'],
+   [`Diện tích hình phẳng bằng ${n**3}/6.`,true,'Lấy tích phân của nx−x² từ 0 đến n.'],
+   [`Khi quay quanh Ox, thể tích bằng π∫ từ 0 đến ${n} của (nx−x²)² dx.`,false,'Diện tích vành khăn là π[(nx)²−(x²)²].']
+  ]);
+  questions[14]=tf(`Trong Oxyz, A=(0; 0; ${n}), B=(${n}; 0; 0), P là mặt phẳng x+z=${n}.`,[
+   ['Cả hai điểm A và B thuộc P.',true,'Thế từng bộ tọa độ.'],
+   ['Đường AB vuông góc với P.',false,'AB nằm trong P.'],
+   ['Vectơ (1; 0; 1) là pháp tuyến của P.',true,'Đọc hệ số x, y, z.'],
+   [`Khoảng cách từ O đến P bằng ${n}.`,false,`Khoảng cách là ${n}/√2.`]
+  ]);
+  questions[15]=tf(`Hộp có ${n} bi xanh và ${n} bi đỏ. Rút hai bi không hoàn lại. A là biến cố bi đầu xanh, B là biến cố bi sau xanh.`,[
+   ['P(A)=1/2.',true,'Hai màu có số lượng bằng nhau.'],
+   ['A và B độc lập.',false,'Lượt đầu làm thay đổi thành phần của hộp.'],
+   [`P(B|A)=${n-1}/${2*n-1}.`,true,'Khi bi đầu xanh, bớt một bi xanh và một bi tổng.'],
+   ['P(B)=1/2.',true,'Mỗi viên có cùng cơ hội nằm ở vị trí rút thứ hai.']
+  ]);
+  questions[16]=a
+   ?short(`Cho f(x)=x³−${3*n*n}x. Tiếp tuyến có hệ số góc nhỏ nhất cắt đường thẳng y=${3*n*n} tại hoành độ nào?`,-1,`Hệ số góc 3x²−${3*n*n} nhỏ nhất tại x=0. Tiếp tuyến y=−${3*n*n}x nên x=−1.`)
+   :short(`Chi phí trung bình của một xưởng là C(x)=x+${n*n}/x+10 với x>0. Tính chi phí trung bình thấp nhất.`,2*n+10,`x+${n*n}/x≥${2*n} theo bất đẳng thức AM–GM. Đẳng thức tại x=${n}.`);
+  questions[17]=short(`Vận tốc v(t)=t−${n} m/s. Tính tổng quãng đường đi được từ t=0 đến t=${2*n} giây.`,n*n,`Vật đổi chiều ở t=${n}. Tích phân của |v| là tổng diện tích hai tam giác, bằng ${n*n}.`);
+  questions[18]=short(`Từ A=(${n}; ${n}; 0) kẻ hình chiếu H lên đường d: (x; y; z)=(t; 0; t). Tính tổng xᴴ+zᴴ.`,n,`AH vuông góc (1;0;1) nên 2t−${n}=0, do đó tổng hai tọa độ là ${n}.`);
+  questions[19]=short(`Mẫu ghép nhóm có các khoảng [0; 2), [2; 4), [4; 6) với tần số ${n}, ${2*n}, ${n}. Ước lượng phương sai theo giá trị đại diện.`,2,'Trung bình là 3. Phương sai là (4n+0+4n)/(4n)=2.');
+  questions[20]=short(`Hộp có ${n} bi đỏ và ${n} bi xanh. Rút hai bi không hoàn lại. Biết có ít nhất một bi đỏ, xác suất có hai bi đỏ là bao nhiêu phần trăm? Làm tròn đến hàng đơn vị và nhập số.`,Math.round(100*(n-1)/(3*n-1)),`Số cặp hai đỏ là n(n−1)/2. Số cặp có đỏ là n(n−1)/2+n². Lấy tỉ số rồi đổi ra phần trăm.`);
+  questions[21]=short(`Đường thẳng (x; y; z)=(t; t; ${n}) cắt mặt cầu x²+y²+z²=${3*n*n} tại hai điểm M, N. Tính MN².`,8*n*n,`Phương trình giao điểm cho t²=${n*n}. Vectơ MN có hai tọa độ chênh nhau 2n và cao độ bằng nhau; MN²=8n².`);
+  if(a){
+   questions[3]=mc(`Biết ∫ từ 0 đến ${n} của f(x) dx = 5. Tính ∫ từ 0 đến ${n} của f(${n}−x)+2 dx.`,5+2*n,[5,2*n-5,5+4*n],'Đổi biến u=n−x đảo cận và đổi dấu vi phân, nên tích phân của f giữ nguyên. Tích phân của 2 bằng 2n.');
+   questions[8]=mc(`Một lô hàng có ${n}% hàng lỗi. Máy báo lỗi đúng 90% trên hàng lỗi, báo nhầm 10% trên hàng tốt. Trong số hàng máy báo lỗi, tỉ lệ hàng thật sự lỗi là bao nhiêu?`,`${9*n}/${100+8*n}`,[`${n}/100`,'9/10',`${9*n}/100`],'Chia xác suất hàng lỗi và được báo (0,9n/100) cho xác suất máy báo trên cả hai loại.');
+   questions[12]=tf(`Xét f(x)=x³−3mx với m>0.`,[
+    ['Đồ thị có hai điểm cực trị.',true,'f′=3(x²−m) có hai nghiệm phân biệt và đổi dấu.'],
+    ['Tích hai giá trị cực trị bằng 4m³.',false,'Hai giá trị là ±2m√m nên tích âm.'],
+    ['Phương trình f(x)=0 có đúng ba nghiệm phân biệt.',true,'Phân tích x(x²−3m)=0.'],
+    [`Để hai hoành độ cực trị cách nhau ${2*n}, cần m=${n*n}.`,true,'Khoảng cách giữa ±√m là 2√m.']
+   ]);
+   questions[13]=tf(`Vật có v(t)=(t−${n})(t−${2*n}) trên [0; ${3*n}] (m/s).`,[
+    [`Vật đổi chiều hai lần.`,true,'Vận tốc đổi dấu qua cả hai nghiệm.'],
+    [`Trên (${n}; ${2*n}) vật đi theo chiều dương.`,false,'Hai thừa số trái dấu.'],
+    [`Quãng đường bằng tích phân của |v(t)| trên [0; ${3*n}].`,true,'Lấy tích phân tốc độ.'],
+    ['Gia tốc tăng đều theo thời gian.',true,'v′(t)=2t−3n có hệ số góc dương.']
+   ]);
+   questions[17]=short(`Tìm b>0 để diện tích phần nằm giữa y=x² và y=bx trên [0; b] bằng ${n**3*36}.`,6*n,`Diện tích bằng b³/6. Vậy b³=${(6*n)**3}.`);
+   questions[19]=short(`Các giá trị đại diện 1, 3, 5 có tần số lần lượt ${n}, k, ${n}. Phương sai ước lượng bằng 1. Tìm k.`,6*n,`Do đối xứng, trung bình bằng 3. Phương sai là 8×${n}/(2×${n}+k)=1.`);
+   questions[21]=short(`Tìm khoảng cách giữa hai mặt phẳng song song x+2y+2z=${n} và x+2y+2z=${7*n}.`,2*n,`Lấy hiệu hai vế phải theo trị tuyệt đối rồi chia √(1+4+4)=3.`);
+  }
+  return questions;
+ }
+ return {bands,apply};
+})();
+if(typeof module!=='undefined')module.exports=examLevels;
+
+</script>
+<script>
+const mockExam=(()=>{
+ const points=[0,10,25,50,100];
+ const levels=typeof module!=='undefined'?require('./exam-levels'):examLevels;
+ const versions=['01','02','03','04','05','06','07','08','09'];
+ const bandFor=v=>Math.floor((Number(v)-1)/3);
+ const key='vietmath-thpt-mock-v1';
+ const parts=['I · Chọn đáp án','II · Đúng / Sai','III · Trả lời ngắn'];
+ let attempt,host,timer,storageError=false;
+ const escape=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[char]);
+ const format=value=>value.toLocaleString('vi-VN',{maximumFractionDigits:2});
+ function make(version){
+  const n=versions.indexOf(version)%3+2;
+  const single=(prompt,answer,distractors,solution)=>({part:0,prompt,answer:String(answer),options:[answer,...distractors].map(String),solution});
+  const group=(prompt,statements)=>({part:1,prompt,statements});
+  const numeric=(prompt,answer,solution)=>({part:2,prompt,answer,solution});
+  const questions=[
+   single(`Hàm số y=x³−${3*n*n}x nghịch biến trên khoảng nào?`,`(−${n}; ${n})`,[`(${n}; +∞)`,`(−∞; −${n})`,'ℝ'],`y′=3(x²−${n*n}), âm khi −${n}<x<${n}.`),
+   single(`Tiệm cận ngang của đồ thị y=(${n}x+1)/(x+1) là đường nào?`,`y=${n}`,['x=−1','y=1',`x=${n}`],'Chia tử và mẫu cho x rồi lấy giới hạn ở vô cực.'),
+   single(`Giá trị nhỏ nhất của f(x)=x²−${2*n}x+${n*n+2} trên [0; ${n+1}] bằng bao nhiêu?`,2,[1,0,n*n+2],`f(x)=(x−${n})²+2. Đạt tại x=${n} thuộc đoạn.`),
+   single(`Một nguyên hàm của f(x)=${n}eˣ là hàm số nào?`,`${n}eˣ`,[`eˣ/${n}`,`${n}xeˣ`,`${n}e²ˣ`],'Đạo hàm eˣ bằng eˣ.'),
+   single(`Tính tích phân của f(x)=2x+1 từ x=0 đến x=${n}.`,n*n+n,[n*n,n*n+n+1,2*n+1],`Nguyên hàm x²+x. Hiệu hai giá trị tại cận là ${n*n+n}.`),
+   single(`Trong Oxyz, tích vô hướng của u=(${n}; 1; 2) và v=(2; −1; 1) bằng bao nhiêu?`,2*n+1,[2*n-1,2*n,2*n+3],'Nhân từng cặp tọa độ rồi cộng, được 2n−1+2.'),
+   single(`Vectơ nào là pháp tuyến của mặt phẳng ${n}x−y+2z+5=0?`,`(${n}; −1; 2)`,[`(${n}; 1; 2)`,`(−${n}; −1; 2)`,`(${n}; −1; 5)`],'Lấy ba hệ số của x, y, z.'),
+   single(`Một mẫu số liệu ghép nhóm có Q₁=${n+4} và Q₃=${n+11}. Khoảng tứ phân vị bằng bao nhiêu?`,7,[5,n+11,2*n+15],'Khoảng tứ phân vị là Q₃−Q₁.'),
+   single(`Cho P(B)=0,5 và P(A∩B)=0,${n}. Tính P(A|B).`,`0,${2*n}`,[`0,${n}`,'0,5','1'],`Chia 0,${n} cho 0,5.`),
+   single(`Cấp số cộng có u₁=${n}, công sai 3. Số hạng thứ tư bằng bao nhiêu?`,n+9,[n+3,n+12,3*n],`u₄=u₁+3d=${n+9}.`),
+   single(`Tập hợp gồm ${n+3} phần tử. Có bao nhiêu cách chọn một tập con gồm hai phần tử?`,(n+3)*(n+2)/2,[(n+3)*(n+2),n+3,(n+3)**2],'Chọn hai phần tử phân biệt, không xét thứ tự.'),
+   single(`Đường thẳng đi qua A(0; 1; 2) có vectơ chỉ phương (1; ${n}; 0). Điểm nào thuộc đường thẳng?`,`(1; ${n+1}; 2)`,[`(1; ${n}; 2)`,`(1; ${n+1}; 0)`,`(0; ${n+1}; 2)`],'Thế t=1 vào (t; 1+nt; 2).'),
+   group(`Xét hàm số f(x)=x³−${3*n*n}x trên ℝ.`,[
+    [`f′(0)=−${3*n*n}.`,true,'f′(x)=3x²−3n².'],
+    [`Hàm số đồng biến trên (−${n}; ${n}).`,false,'Đạo hàm âm trên khoảng này.'],
+    [`Hàm số đạt cực đại tại x=−${n}.`,true,'Đạo hàm đổi dấu từ dương sang âm.'],
+    [`Giá trị cực tiểu là ${2*n**3}.`,false,`f(${n})=−${2*n**3}.`]
+   ]),
+   group(`Một vật chuyển động thẳng có vận tốc v(t)=${n}t+2 (m/s) trong 4 giây đầu.`,[
+    [`Vận tốc lúc t=0 là ${n} m/s.`,n===2,'v(0)=2 m/s.'],
+    [`Gia tốc không đổi, bằng ${n} m/s².`,true,'Đạo hàm v′(t)=n.'],
+    [`Quãng đường từ giây 0 đến giây 2 là ${2*n+4} m.`,true,'v(t)>0, lấy tích phân từ 0 đến 2.'],
+    [`Quãng đường trong hai giây sau bằng quãng đường trong hai giây đầu.`,false,'Vận tốc tăng đều nên quãng đường trong hai giây sau lớn hơn.']
+   ]),
+   group(`Trong Oxyz, mặt cầu (S) có phương trình (x−${n})²+y²+z²=${n*n}. Gọi I là tâm.`,[
+    ['Gốc tọa độ O nằm trên (S).',true,'Khoảng cách OI bằng bán kính n.'],
+    [`I có tọa độ (−${n}; 0; 0).`,false,`Tâm có hoành độ ${n}.`],
+    ['Mặt phẳng x=0 tiếp xúc với (S).',true,'Khoảng cách từ tâm đến mặt phẳng bằng bán kính.'],
+    [`Điểm (${3*n}; 0; 0) nằm trong mặt cầu.`,false,'Điểm cách tâm 2n, lớn hơn bán kính.']
+   ]),
+   group(`Một xưởng có hai dây chuyền A và B sản xuất số lượng bằng nhau. Tỉ lệ lỗi của A là ${n}% và của B là ${3*n}%. Chọn ngẫu nhiên một sản phẩm.`,[
+    ['Xác suất lấy sản phẩm từ A là 0,5.',true,'Hai dây chuyền sản xuất số lượng bằng nhau.'],
+    [`Xác suất lấy sản phẩm lỗi là ${2*n}%.`,true,'Dùng xác suất toàn phần, lấy trung bình hai tỉ lệ lỗi.'],
+    ['Nếu sản phẩm bị lỗi, xác suất nó từ A là 0,5.',false,'Theo Bayes, kết quả là 1/4.'],
+    ['Nếu sản phẩm bị lỗi, xác suất nó từ B là 0,75.',true,'Chia xác suất đồng thời từ B và lỗi cho xác suất lỗi.']
+   ]),
+   numeric(`Dùng ${2*n+12} mét lưới rào ba cạnh của một mảnh vườn chữ nhật, cạnh còn lại giáp tường. Tìm diện tích lớn nhất (m²), làm tròn đến một chữ số thập phân.`,Math.round((n+6)**2*5)/10,`Gọi chiều rộng x, diện tích x(${2*n+12}−2x). Đỉnh đạt tại x=${format((n+6)/2)}, diện tích chính xác bằng ${format((n+6)**2/2)}.`),
+   numeric(`Một bể ban đầu chứa 20 lít nước. Nước chảy vào với tốc độ q(t)=${n}t+3 lít/phút. Sau 4 phút bể có bao nhiêu lít?`,32+8*n,`Tích phân từ 0 đến 4 cho ${12+8*n} lít. Cộng 20 lít ban đầu.`),
+   numeric(`Trong Oxyz, A=(1; 2; 3), B=(${n+1}; ${2*n+2}; ${2*n+3}). Tính độ dài AB.`,3*n,'Vectơ AB=(n; 2n; 2n), độ dài là căn của 9n².'),
+   numeric(`Mẫu ghép nhóm gồm hai khoảng [0; 2), [2; 4) có tần số lần lượt ${n} và ${3*n}. Tính trung bình ước lượng của mẫu.`,2.5,'Trung điểm là 1 và 3. Trung bình có trọng số là (n+9n)/(4n)=2,5.'),
+   numeric(`Một phòng khám có ${n*5}% người đến từ khu A. Tỉ lệ đặt hẹn ở A là 80%, ở khu còn lại là 20%. Biết người được chọn đã đặt hẹn, xác suất người đó thuộc khu A là bao nhiêu phần trăm? Làm tròn đến hàng đơn vị và nhập số.`,Math.round(400*n/(20+3*n)),`Bayes cho P(A|hẹn)=4×${n}/(20+3×${n}). Đổi ra phần trăm rồi làm tròn.`),
+   numeric(`Mặt phẳng 2x−2y+z−${3*n}=0. Tính khoảng cách từ O đến mặt phẳng.`,n,`Tử số là ${3*n}, mẫu số là √(4+4+1)=3.`)
+  ];
+  return levels.apply(questions,version).map((q,i)=>{
+   if(!q.options)return q;
+   const shift=(i*3+n)%4;
+   return {...q,options:[...q.options.slice(shift),...q.options.slice(0,shift)]};
+  });
+ }
+ function number(value){
+  const input=String(value??'').trim().replace(',','.').replace(/−/g,'-');
+  if(/^[+-]?(?:\d+(?:\.\d+)?|\.\d+)$/.test(input))return Number(input);
+  const fraction=input.match(/^([+-]?\d+)\s*\/\s*([+-]?\d+)$/);
+  if(fraction&&Number(fraction[2]))return Number(fraction[1])/Number(fraction[2]);
+  return NaN;
+ }
+ function grade(questions,answers){
+  return questions.map((q,i)=>{
+   const a=answers[i];
+   if(q.part===0)return a===q.answer?25:0;
+   if(q.part===1)return points[q.statements.filter(([,right],j)=>a?.[j]===String(right)).length];
+   return Math.abs(number(a)-q.answer)<1e-9?50:0;
+  });
+ }
+ function load(){
+  try{
+   const saved=JSON.parse(localStorage.getItem(key));
+   if(saved&&versions.includes(saved.version)&&Array.isArray(saved.answers)&&Number.isFinite(saved.deadline)&&Number.isInteger(saved.index)&&saved.index>=0&&saved.index<22)attempt=saved;
+  }catch{storageError=true;}
+ }
+ function save(){
+  try{localStorage.setItem(key,JSON.stringify(attempt));storageError=false;}catch{storageError=true;}
+ }
+ const full=(q,a)=>q.part===1?q.statements.every((_,i)=>a?.[i]==='true'||a?.[i]==='false'):String(a??'').trim()!=='';
+ function detach(){clearInterval(timer);host=null;}
+ function frame(html){
+  host.innerHTML=`<div class="mock"><a class="text-link" href="#luyen-de">← Luyện đề</a>${storageError?'<p role="alert" class="form-error">Trình duyệt chưa lưu được đề đang làm.</p>':''}${html}</div>`;
+  return host.lastElementChild;
+ }
+ function room(){
+  const root=frame(`<header class="page-title"><h1>Thi thử Toán tốt nghiệp THPT</h1><p>90 phút · 22 câu · Thang điểm 10</p></header><section class="panel"><h2>Chọn đề mô phỏng</h2><ol><li>12 câu chọn một đáp án</li><li>4 câu đúng/sai, mỗi câu có 4 ý</li><li>6 câu trả lời ngắn</li></ol><p>Đề tự biên soạn, tập trung vào lớp 12. Chọn mức phù hợp. Mỗi mức có ba mã đề với số liệu khác nhau.</p><p>Đồng hồ tiếp tục chạy khi em rời trang. Sau khi nộp, em có thể xem điểm từng phần và lời giải.</p><div class="actions">${attempt?`<button class="button primary" id="resume">${attempt.finished?'Xem kết quả':'Tiếp tục làm'} đề ${attempt.version}</button>`:''}</div><div class="exam-levels">${levels.bands.map((band,index)=>`<div class="exam-level"><h3>${band}</h3><p>${['Công thức và dạng bài nền tảng','Bài toán nhiều bước và ứng dụng','Câu hỏi có tham số và yêu cầu suy luận'][index]}</p><div class="actions">${versions.filter(v=>bandFor(v)===index).map(v=>`<button class="button secondary" data-version="${v}" aria-label="Bắt đầu đề ${v}">Đề ${v}</button>`).join('')}</div></div>`).join('')}</div></section>`);
+  root.querySelector('#resume')?.addEventListener('click',showAttempt);
+  root.querySelectorAll('[data-version]').forEach(button=>button.addEventListener('click',()=>{
+   if(attempt&&!confirm('Bắt đầu đề mới sẽ thay thế lượt thi đang lưu. Em có muốn tiếp tục?'))return;
+   attempt={version:button.dataset.version,answers:[],index:0,deadline:Date.now()+90*60*1000,finished:false};
+   save();showAttempt();
+  }));
+ }
+ function finish(){
+  if(attempt.finished)return;
+  attempt.finished=true;save();result();
+ }
+ function showAttempt(){
+  clearInterval(timer);
+  if(attempt.finished){result();return;}
+  if(Date.now()>=attempt.deadline){finish();return;}
+  const questions=make(attempt.version);
+  const i=attempt.index, q=questions[i], a=attempt.answers[i];
+  const controls=q.part===0?q.options.map(option=>`<label class="mock-choice"><input type="radio" name="mock-option" value="${escape(option)}" ${a===option?'checked':''}> <span>${escape(option)}</span></label>`).join(''):
+   q.part===1?q.statements.map(([statement],j)=>`<fieldset class="mock-statement"><legend>${'abcd'[j]}) ${escape(statement)}</legend>${['true','false'].map((value,k)=>`<label><input type="radio" name="mock-statement-${j}" data-statement="${j}" value="${value}" ${a?.[j]===value?'checked':''}> ${k?'Sai':'Đúng'}</label>`).join('')}</fieldset>`).join(''):
+   `<label for="mock-number">Đáp án số</label><input class="answer-input mock-number" id="mock-number" type="text" inputmode="decimal" value="${escape(a)}" autocomplete="off" maxlength="32"><p class="mock-help">Dùng dấu phẩy hoặc dấu chấm cho số thập phân.</p>`;
+  const root=frame(`<header class="page-title mock-title"><div><h1>Đề mô phỏng ${attempt.version}</h1><p id="mock-progress"></p></div><strong id="mock-timer" aria-label="Thời gian còn lại"></strong></header><div class="mock-layout"><section class="panel" aria-labelledby="mock-prompt"><p class="tag">${parts[q.part]} · Câu ${questions.slice(0,i+1).filter(x=>x.part===q.part).length}</p><h2 id="mock-prompt" tabindex="-1">${escape(q.prompt)}</h2><div class="mock-options">${controls}</div><div class="actions"><button class="button secondary" id="mock-prev" ${i===0?'disabled':''}>← Câu trước</button><button class="button secondary" id="mock-next" ${i===questions.length-1?'disabled':''}>Câu sau →</button></div></section><aside class="panel mock-nav" aria-label="Đi đến câu hỏi">${parts.map((label,p)=>`<p>${label}</p><div class="mock-grid">${questions.map((question,j)=>question.part===p?`<button type="button" data-jump="${j}" ${j===i?'aria-current="step"':''}>${questions.slice(0,j+1).filter(x=>x.part===p).length}</button>`:'').join('')}</div>`).join('')}<button class="button primary" id="mock-submit">Nộp bài</button></aside></div>`);
+  function mark(){
+   root.querySelector('#mock-progress').textContent=`Đã trả lời đủ ${questions.filter((item,j)=>full(item,attempt.answers[j])).length}/${questions.length} câu`;
+   root.querySelectorAll('[data-jump]').forEach(button=>{
+    const j=Number(button.dataset.jump), item=questions[j], done=full(item,attempt.answers[j]);
+    const within=questions.slice(0,j+1).filter(x=>x.part===item.part).length;
+    button.classList.toggle('answered',done);
+    button.setAttribute('aria-label',`${parts[item.part]}, câu ${within}, ${done?'đã trả lời':'chưa trả lời đủ'}`);
+   });
+  }
+  root.querySelector('.mock-options').addEventListener('input',event=>{
+   const field=event.target;
+   if(q.part===1){
+    if(!Array.isArray(attempt.answers[i]))attempt.answers[i]=[];
+    attempt.answers[i][Number(field.dataset.statement)]=field.value;
+   }else attempt.answers[i]=field.value;
+   save();mark();
+  });
+  function jump(j){attempt.index=j;save();showAttempt();host.querySelector('#mock-prompt')?.focus();}
+  root.querySelectorAll('[data-jump]').forEach(button=>button.addEventListener('click',()=>jump(Number(button.dataset.jump))));
+  root.querySelector('#mock-prev').addEventListener('click',()=>jump(i-1));
+  root.querySelector('#mock-next').addEventListener('click',()=>jump(i+1));
+  root.querySelector('#mock-submit').addEventListener('click',()=>{
+   const missing=questions.filter((item,j)=>!full(item,attempt.answers[j])).length;
+   if(confirm(missing?`Còn ${missing} câu chưa trả lời đủ. Em muốn nộp bài?`:'Em muốn nộp bài và xem kết quả?'))finish();
+  });
+  function tick(){
+   const seconds=Math.max(0,Math.ceil((attempt.deadline-Date.now())/1000));
+   root.querySelector('#mock-timer').textContent=Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0');
+   if(!seconds)finish();
+  }
+  mark();timer=setInterval(tick,250);tick();
+ }
+ function result(){
+  clearInterval(timer);
+  const questions=make(attempt.version),scores=grade(questions,attempt.answers);
+  const total=scores.reduce((sum,p)=>sum+p,0);
+  const root=frame(`<header class="page-title"><h1>Kết quả đề ${attempt.version}</h1><p>Điểm toàn bài · <strong id="mock-score">${format(total/100)}/10</strong></p></header><div class="stats">${parts.map((name,p)=>`<div class="stat"><strong>${format(scores.reduce((sum,score,j)=>sum+(questions[j].part===p?score:0),0)/100)}/${[3,4,3][p]}</strong><span>${name}</span></div>`).join('')}</div><section class="panel"><h2>Đáp án và lời giải</h2>${questions.map((q,i)=>`<details class="mock-review"><summary>${parts[q.part]} · Câu ${questions.slice(0,i+1).filter(x=>x.part===q.part).length} · ${format(scores[i]/100)} điểm</summary><p><strong>${escape(q.prompt)}</strong></p>${q.part===1?q.statements.map(([statement,correct,solution],j)=>`<p>${'abcd'[j]}) ${escape(statement)}<br>Em chọn: ${choice(attempt.answers[i]?.[j])} · Đáp án: <strong>${choice(String(correct))}</strong><br>${escape(solution)}</p>`).join(''):`<p>Em trả lời: ${escape(attempt.answers[i]||'Bỏ trống')} · Đáp án: <strong>${escape(q.part===2?format(q.answer):q.answer)}</strong></p><p>${escape(q.solution)}</p>`}</details>`).join('')}</section><button class="button secondary" id="mock-room">Về phòng thi</button>`);
+  root.querySelector('#mock-room').addEventListener('click',room);
+  root.querySelector('h1').setAttribute('tabindex','-1');root.querySelector('h1').focus();
+ }
+ const choice=value=>value==='true'?'Đúng':value==='false'?'Sai':'Bỏ trống';
+ function render(target){host=target;room();}
+ if(typeof localStorage!=='undefined')load();
+ return {render,detach,make,grade,versions};
+})();
+if(typeof module!=='undefined')module.exports=mockExam;
+
+</script>
+<script>
+(() => {
+'use strict';
+const grades=[10,11,12];
+const strands=[A,G,D];
+const main=document.getElementById('main');
+const gradeInput=document.getElementById('grade');
+const byId=new Map(topics.map(t=>[t.id,t]));
+const key='vietmath-thpt-v1';
+const empty=()=>({grade:10,attempts:[],mistakes:[]});
+let data=empty();
+let saveError=false;
+const validQuestion=item=>item && byId.has(item.topic) && typeof item.prompt==='string' &&
+ typeof item.answer==='string' && typeof item.solution==='string' && typeof item.hint==='string' &&
+ (item.choices===undefined || Array.isArray(item.choices)&&item.choices.every(x=>typeof x==='string'));
+try{
+ const saved=JSON.parse(localStorage.getItem(key));
+ if(saved && grades.includes(saved.grade) && Array.isArray(saved.attempts) && Array.isArray(saved.mistakes)){
+   data={grade:saved.grade,
+     attempts:saved.attempts.filter(a=>a&&grades.includes(a.grade)&&typeof a.title==='string'&&typeof a.at==='string'&&Number.isInteger(a.right)&&Number.isInteger(a.total)&&a.total>=a.right&&a.right>=0).slice(0,200),
+     mistakes:saved.mistakes.filter(validQuestion).slice(0,300)};
+ }
+}catch{saveError=true;}
+let active=null;
+let topicFilter='';
+let search='';
+let clockId;
+const routes=['lo-trinh','luyen-de','thi-thu','on-loi','tien-do','nguon'];
+const e=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+const selectedTopics=()=>topics.filter(t=>t.grade===data.grade);
+const recent=()=>data.attempts.filter(a=>a.grade===data.grade);
+const trained=t=>data.attempts.some(a=>a.topic===t.id&&a.mode==='practice'&&a.total===3&&a.right>=2);
+const mistakes=()=>data.mistakes.filter(m=>byId.get(m.topic).grade===data.grade);
+const currentRoute=()=>location.hash.slice(1)||'lo-trinh';
+const title=(name,description)=>`<header class="page-title"><h1>${e(name)}</h1><p>${e(description)}</p></header>`;
+const button=(name,action,value='',primary=true)=>`<button type="button" class="button ${primary?'primary':'secondary'}" data-action="${action}" data-value="${e(value)}">${e(name)}</button>`;
+const link=(name,href,primary=true)=>`<a class="button ${primary?'primary':'secondary'}" href="${e(href)}">${e(name)}</a>`;
+function save(){
+ try{localStorage.setItem(key,JSON.stringify(data));saveError=false;}
+ catch{saveError=true;}
+}
+function page(html){
+ main.innerHTML=(saveError?'<p class="panel form-error" role="alert">Trình duyệt chưa lưu được tiến độ.</p>':'')+html;
+}
+function normalize(s){
+ return String(s).normalize('NFC').toLocaleLowerCase('vi').trim().replace(/[−–]/g,'-').replace(/\s+/g,'').replace(/\bpi\b/g,'π');
+}
+function number(s){
+ const x=s.replace(',','.');
+ if(/^[+-]?\d+(?:\.\d+)?$/.test(x))return Number(x);
+ const m=x.match(/^([+-]?\d+)\/([+-]?\d+)$/);
+ if(m&&Number(m[2])!==0)return Number(m[1])/Number(m[2]);
+}
+function same(input,expected){
+ const x=normalize(input),y=normalize(expected);
+ if(x===y)return true;
+ const coef=s=>s.endsWith('π')?number(s.slice(0,-1).replace(/\*$/,'')||'1'):undefined;
+ const a=x.endsWith('π')&&y.endsWith('π')?coef(x):number(x);
+ const b=x.endsWith('π')&&y.endsWith('π')?coef(y):number(y);
+ return Number.isFinite(a)&&Number.isFinite(b)&&Math.abs(a-b)<1e-9;
+}
+function random(max){return Math.floor(Math.random()*max);}
+function shuffle(list){
+ const result=[...list];
+ for(let i=result.length-1;i>0;i--){const j=random(i+1);[result[i],result[j]]=[result[j],result[i]];}
+ return result;
+}
+function makeQuestions(topic){
+ return shuffle(topic.examples).map(make=>({ ...make(2+random(8)),topic:topic.id }));
+}
+function draw(){
+ const canvas=document.querySelector('#plot');
+ if(!canvas)return;
+ const c=canvas.getContext('2d');
+ c.save();c.translate(188,105);
+ c.strokeStyle='#69588d';c.lineWidth=.7;
+ for(let x=-168;x<=168;x+=21){c.beginPath();c.moveTo(x,-84);c.lineTo(x,84);c.stroke();}
+ for(let y=-84;y<=84;y+=21){c.beginPath();c.moveTo(-168,y);c.lineTo(168,y);c.stroke();}
+ c.strokeStyle='#d6cbee';c.lineWidth=1.15;
+ c.beginPath();c.moveTo(-172,0);c.lineTo(175,0);c.moveTo(0,88);c.lineTo(0,-89);c.stroke();
+ c.fillStyle='#e8dfff';c.font='13px system-ui';c.fillText('x',164,17);c.fillText('y',9,-81);
+ c.strokeStyle='#c8b5ff';c.lineWidth=3;c.beginPath();
+ for(let px=-144;px<=144;px++){
+   const x=px/38;
+   const y=data.grade===10?x*x/4:data.grade===11?2**x/4:x*x*x/24-x*.65;
+   if(px===-144)c.moveTo(px,-y*20);else c.lineTo(px,-y*20);
+ }
+ c.stroke();
+ c.fillText({10:'Hàm bậc hai',11:'Hàm mũ',12:'Hàm bậc ba'}[data.grade],48,-69);
+ c.restore();
+}
+function renderTopicGrid(){
+ const box=document.getElementById('topics');
+ if(!box)return;
+ const simplify=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').toLowerCase();
+ const result=selectedTopics().filter(t=>(!topicFilter||topicFilter===t.strand)&&simplify(t.title).includes(simplify(search)));
+ box.innerHTML=result.length?result.map(t=>`<article class="topic"><span class="tag">${e(t.strand)}</span><h3>${e(t.title)}</h3><small>${trained(t)?'Đã đạt mục tiêu luyện tập':'Lý thuyết và 3 dạng câu hỏi'}</small><div class="actions"><a class="text-link" href="#bai/${t.id}">Mở bài học →</a></div></article>`).join(''):'<p class="panel">Không tìm thấy chủ đề phù hợp.</p>';
+}
+function roadmap(){
+ const list=selectedTopics(),next=list.find(t=>!trained(t))||list[0];
+ const done=list.filter(trained).length;
+ page(`<section class="hero"><div><p class="eyebrow">Toán cấp 3 · Lớp ${data.grade}</p><h1>VietMath THPT</h1><p>Học theo chủ đề, luyện từng kỹ năng và quay lại những câu em còn vướng.</p><div class="actions">${link(done?'Tiếp tục học →':'Học bài đầu tiên →','#bai/'+next.id)} ${link('Khám phá bằng hình','#bai/'+mathLabs.byGrade[data.grade],false)} ${data.grade===12?link('Thi thử 90 phút','#thi-thu',false):''}</div></div><canvas id="plot" width="376" height="214" role="img" aria-label="Đồ thị minh họa lớp ${data.grade}"></canvas></section>
+ <section class="stats" aria-label="Tiến độ lớp ${data.grade}"><div class="stat"><strong>${done}/${list.length}</strong><span>Chủ đề đạt mục tiêu</span></div><div class="stat"><strong>${recent().length}</strong><span>Lượt đã làm</span></div><div class="stat"><strong>${mistakes().length}</strong><span>Câu cần ôn</span></div></section>
+ <section aria-labelledby="topic-heading"><div class="section-head"><div><h2 id="topic-heading">Chủ đề lớp ${data.grade}</h2><p>Luyện đạt từ 2/3 câu đúng để đánh dấu một chủ đề.</p></div><div class="filters"><input type="search" id="search" aria-label="Tìm chủ đề" placeholder="Tìm chủ đề…" value="${e(search)}"><select id="strand" aria-label="Lọc theo mạch kiến thức"><option value="">Tất cả mạch</option>${strands.map(s=>`<option value="${e(s)}" ${s===topicFilter?'selected':''}>${e(s)}</option>`).join('')}</select></div></div><div class="grid" id="topics"></div></section>`);
+ renderTopicGrid();draw();
+}
+function lessonView(id){
+ const t=byId.get(id);
+ if(!t||t.grade!==data.grade){roadmap();return;}
+ const example=content.find(x=>x.id===id).examples[0];
+ page(`<div class="reading"><a href="#lo-trinh" class="text-link">← Lộ trình lớp ${t.grade}</a><header class="page-title"><p class="eyebrow">${e(t.strand)}</p><h1>${e(t.title)}</h1></header><section class="panel"><h2>Kiến thức cần nhớ</h2><p class="formula">${e(t.rule)}</p></section>${mathLabs.markup(id)}<section class="panel"><h2>Ví dụ có lời giải</h2><p><strong>${e(example.prompt)}</strong></p><p>${e(example.solution)}</p><p>Đáp án: <strong>${e(example.answer)}</strong></p></section><div class="actions">${button('Luyện 3 câu','practice',id)} ${link('Chọn chủ đề khác','#lo-trinh',false)}</div></div>`);
+ mathLabs.bind(id);
+}
+function examView(){
+ page(title('Luyện đề lớp '+data.grade,'Chọn một bài luyện theo mạch hoặc làm đề tổng hợp có đồng hồ.')+`<section class="panel exam-banner"><div><p class="eyebrow">Ôn thi tốt nghiệp THPT</p><h2>Thi thử Toán 90 phút</h2><p>Chủ yếu kiến thức lớp 12. Đề mô phỏng có ba phần, chấm theo thang 10 và có lời giải.</p></div>${link("Mở phòng thi","#thi-thu")}</section><div class="mode-grid">${strands.map(s=>`<article class="mode"><h2>${e(s)}</h2><p>6 câu luyện tập. Xem gợi ý và lời giải sau từng câu.</p>${button('Bắt đầu luyện','strand-exam',s)}</article>`).join('')}<article class="mode"><h2>${'Đề tổng hợp'}</h2><p>12 câu trong 20 phút, đủ ba mạch. Xem lời giải sau khi nộp.</p>${button('Bắt đầu làm đề','exam')}</article></div>`);
+}
+function errorsView(){
+ const list=mistakes();
+ page(title('Ôn câu sai','Mỗi câu trả lời đúng khi ôn sẽ được gỡ khỏi danh sách cần ôn.')+
+ (list.length?`<div class="panel">${button('Ôn '+Math.min(list.length,12)+' câu','review')}${list.slice(0,12).map(x=>`<div class="result-item"><span class="tag">${e(byId.get(x.topic).title)}</span><p>${e(x.prompt)}</p></div>`).join('')}</div>`:'<div class="panel"><p>Chưa có câu cần ôn ở lớp này.</p><div class="actions">'+link('Chọn bài để học','#lo-trinh')+'</div></div>'));
+}
+function progressView(){
+ const list=recent();
+ const stats=strands.map(s=>{const entries=list.flatMap(x=>x.strands?.[s]?[x.strands[s]]:[]);return {s,right:entries.reduce((a,x)=>a+x.right,0),total:entries.reduce((a,x)=>a+x.total,0)};});
+ page(title('Tiến độ lớp '+data.grade,'Kết quả các lượt đã nộp trên trình duyệt này.')+`<div class="stats">${stats.map(x=>`<div class="stat"><strong>${x.total?x.right+'/'+x.total:'—'}</strong><span>${e(x.s)}</span></div>`).join('')}</div><section class="panel"><h2>Lịch sử học</h2>${list.length?list.slice(0,20).map(a=>`<div class="result-item"><strong>${e(a.title)}</strong><p>${a.right}/${a.total} câu đúng · ${e(new Date(a.at).toLocaleDateString('vi-VN'))}</p></div>`).join(''):'<p>Chưa có lượt học được nộp.</p>'}</section>`);
+}
+function sources(){
+ page(title('Nguồn nội dung','Tài liệu của Bộ Giáo dục và Đào tạo dùng để đối chiếu chương trình và định dạng đề.')+
+ '<section class="panel"><p>Các bài học tóm tắt và đề mô phỏng trong ứng dụng do VietMath tự biên soạn.</p><ul class="source-list"><li><a href="https://moet.gov.vn/content/vanban/Lists/VBPQ/Attachments/1453/vbhn-322018-202021-ttbgddt-trinh-ky-xt.pdf">Chương trình Giáo dục phổ thông 2018</a></li><li><a href="https://vqa.moet.gov.vn/vi/news/thong-bao/cau-truc-dinh-dang-de-thi-tot-nghiep-thpt-tu-nam-2025-74.html">Cấu trúc đề thi tốt nghiệp THPT từ 2025</a></li><li><a href="https://vqa.moet.gov.vn/vi/news/tin-tuc-su-kien/de-thi-tham-khao-ky-thi-tot-nghiep-thpt-tu-nam-2025-159.html">Đề thi tham khảo của Bộ</a></li></ul></section>');
+}
+function render(){
+ gradeInput.value=String(data.grade);
+ const route=currentRoute();
+ mockExam.detach();
+ for(const a of document.querySelectorAll('#navigation a')){
+   const selected=a.hash==='#'+route||(route==='thi-thu'&&a.hash==='#luyen-de')||(route.startsWith('bai/')&&a.hash==='#lo-trinh');
+   if(selected)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+ }
+ if(active&&route==='lam-bai'){active.finished?renderResult():renderQuiz();return;}
+ if(active&&!active.finished){clearInterval(clockId);active=null;}
+ if(route.startsWith('bai/'))lessonView(route.slice(4));
+ else if(route==='luyen-de')examView();
+ else if(route==='thi-thu')mockExam.render(main);
+ else if(route==='on-loi')errorsView();
+ else if(route==='tien-do')progressView();
+ else if(route==='nguon')sources();
+ else roadmap();
+}
+function start(mode,questions,name,topic){
+ if(!questions.length)return;
+ clearInterval(clockId);
+ active={mode,questions:questions.map(q=>({...q,choices:q.choices&&shuffle(q.choices)})),title:name,topic,index:0,answers:[],draft:'',hint:false,checked:false,finished:false,deadline:mode==='exam'?Date.now()+1200000:0};
+ location.hash='lam-bai';render();
+ if(active.deadline)clockId=setInterval(updateTimer,250);
+ main.focus();window.scrollTo(0,0);
+}
+function updateTimer(){
+ if(!active||active.finished)return;
+ const seconds=Math.max(0,Math.ceil((active.deadline-Date.now())/1000));
+ const timer=document.getElementById('timer');
+ if(timer)timer.textContent=Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0');
+ if(!seconds)finish();
+}
+function renderQuiz(){
+ const s=active, current=s.questions[s.index],checked=s.checked;
+ const last=s.index===s.questions.length-1;
+ const latest=checked?s.answers[s.index]:null;
+ const opts=current.choices?`<fieldset class="options"><legend class="visually-hidden">Phương án trả lời</legend>${current.choices.map(opt=>`<label class="option"><input type="radio" name="answer" value="${e(opt)}" ${s.draft===opt?'checked':''} ${checked?'disabled':''}><span>${e(opt)}</span></label>`).join('')}</fieldset>`:
+ `<label for="answer">Đáp án của em</label><input class="answer-field" id="answer" name="answer" value="${e(s.draft)}" autocomplete="off" ${checked?'disabled':''}><p class="help">Có thể nhập số, phân số như 2/3 hoặc biểu thức theo π khi đề yêu cầu.</p>`;
+ page(`<div class="reading">${title(s.title,'Lớp '+data.grade)}<section class="panel"><div class="quiz-meta"><span>Câu ${s.index+1}/${s.questions.length}</span>${s.deadline?'<span id="timer" aria-label="Thời gian còn lại">20:00</span>':''}</div><progress aria-label="Tiến trình làm bài" value="${s.index+(checked?1:0)}" max="${s.questions.length}"></progress><p class="tag">${e(byId.get(current.topic).strand)}</p><h2 class="prompt" id="prompt">${e(current.prompt)}</h2><form id="answer-form" aria-labelledby="prompt">${opts}<p class="form-error" id="answer-error" role="status"></p>
+ ${s.hint?`<p class="formula" role="status">${e(current.hint)}</p>`:''}
+ ${checked?`<div class="feedback ${latest.correct?'correct':'incorrect'}" role="status"><strong>${latest.correct?'Chính xác':'Chưa đúng · Đáp án: '+e(current.answer)}</strong><p>${e(current.solution)}</p></div>`:''}
+ <div class="actions">${checked?button(last?'Xem kết quả':'Câu tiếp theo','next'):`<button type="submit" class="button primary">${s.mode==='exam'?(last?'Nộp đề':'Câu tiếp theo'):'Kiểm tra đáp án'}</button>`}
+ ${!checked&&s.mode!=='exam'?button(s.hint?'Ẩn gợi ý':'Xem gợi ý','hint','',false):''}
+ ${!checked&&s.mode==='exam'?button(last?'Nộp đề và bỏ trống câu này':'Bỏ qua','skip','',false):''}
+ ${button('Rời bài','exit','',false)}</div></form></section></div>`);
+ if(s.deadline)updateTimer();
+}
+function submitAnswer(skip=false){
+ if(!active||active.checked||active.finished)return;
+ const s=active;
+ if(s.deadline&&Date.now()>=s.deadline){finish();return;}
+ if(!skip&&!s.draft.trim()){document.getElementById('answer-error').textContent='Em hãy nhập hoặc chọn đáp án.';return;}
+ const question=s.questions[s.index];
+ s.answers[s.index]={value:s.draft,correct:!skip&&same(s.draft,question.answer),skipped:skip};
+ if(s.mode==='exam'){next();return;}
+ s.checked=true;
+ if(s.index===s.questions.length-1)record();
+ renderQuiz();document.querySelector('[data-action="next"]')?.focus();
+}
+function next(){
+ if(active.index===active.questions.length-1){finish();return;}
+ active.index++;active.draft='';active.hint=false;active.checked=false;renderQuiz();document.querySelector('#prompt')?.scrollIntoView({block:'nearest'});
+}
+function record(){
+ const s=active;
+ if(s.recorded)return;
+ s.recorded=true;
+ const results={};
+ let right=0,total=0;
+ s.questions.forEach((q,i)=>{
+  const a=s.answers[i];
+  if(!a||a.skipped)return;
+  const strand=byId.get(q.topic).strand;
+  const sum=results[strand]??={right:0,total:0};
+  sum.total++;total++;
+  data.mistakes=data.mistakes.filter(m=>m.topic!==q.topic||m.prompt!==q.prompt);
+  if(a.correct){sum.right++;right++;}else data.mistakes.unshift(q);
+ });
+ if(total>0)data.attempts.unshift({grade:data.grade,title:s.title,topic:s.topic,mode:s.mode,at:new Date().toISOString(),right,total,strands:results});
+ data.attempts=data.attempts.slice(0,200);data.mistakes=data.mistakes.slice(0,300);save();
+}
+function finish(){
+ if(!active||active.finished)return;
+ clearInterval(clockId);
+ record();active.finished=true;renderResult();main.focus();window.scrollTo(0,0);
+}
+function renderResult(){
+ const s=active, right=s.answers.filter(a=>a.correct).length, answered=s.answers.filter(a=>!a.skipped).length;
+ page(`<div class="reading">${title('Kết quả',s.title)}<section class="panel"><p class="result-score">${right}/${s.questions.length} đúng</p><p>Đã trả lời ${answered} câu · ${s.questions.length-answered} câu chưa trả lời</p><div class="actions">${link('Tiếp tục học','#lo-trinh')}${link('Ôn câu sai','#on-loi',false)}${link('Xem tiến độ','#tien-do',false)}</div></section><section class="panel"><h2>Lời giải từng câu</h2>${s.questions.map((q,i)=>`<div class="result-item"><h3>${i+1}. ${e(q.prompt)}</h3><p>Em trả lời: ${e(s.answers[i]?.value||'Chưa trả lời')} · Đáp án: <strong>${e(q.answer)}</strong></p><p>${e(q.solution)}</p></div>`).join('')}</section></div>`);
+}
+function leaveAllowed(){
+ return !active||active.finished||active.recorded||!active.answers.length||confirm('Rời bài sẽ bỏ lượt làm chưa hoàn thành. Em có muốn rời bài?');
+}
+main.addEventListener('click',event=>{
+ const control=event.target.closest('[data-action]');
+ if(!control)return;
+ const action=control.dataset.action, value=control.dataset.value;
+ if(action==='practice'){const t=byId.get(value);start('practice',makeQuestions(t),t.title,t.id);}
+ if(action==='strand-exam'){const list=shuffle(selectedTopics().filter(t=>t.strand===value));start('strand',shuffle(list.flatMap(makeQuestions)).slice(0,6),value);}
+ if(action==='exam'){
+   const questions=strands.flatMap(strand=>shuffle(selectedTopics().filter(t=>t.strand===strand).flatMap(makeQuestions)).slice(0,4));
+   start('exam',shuffle(questions),'Đề tổng hợp lớp '+data.grade);
+ }
+ if(action==='review')start('review',mistakes().slice(0,12),'Ôn câu sai');
+ if(action==='next')next();
+ if(action==='skip')submitAnswer(true);
+ if(action==='hint'){active.hint=!active.hint;renderQuiz();document.querySelector('[data-action="hint"]')?.focus();}
+ if(action==='exit'&&leaveAllowed()){clearInterval(clockId);active=null;location.hash='lo-trinh';}
+});
+main.addEventListener('submit',event=>{if(event.target.id==='answer-form'){event.preventDefault();submitAnswer();}});
+main.addEventListener('input',event=>{
+ if(event.target.id==='search'){search=event.target.value;renderTopicGrid();}
+ if(active&&event.target.name==='answer')active.draft=event.target.value;
+});
+main.addEventListener('change',event=>{
+ if(event.target.id==='strand'){topicFilter=event.target.value;renderTopicGrid();}
+ if(active&&event.target.name==='answer')active.draft=event.target.value;
+});
+document.querySelector('.skip').addEventListener('click',event=>{event.preventDefault();main.focus();});
+document.addEventListener('click',event=>{
+ const a=event.target.closest('a[href^="#"]');
+ if(a&&a.hash!=='#main'&&currentRoute()==='lam-bai'&&!leaveAllowed())event.preventDefault();
+});
+gradeInput.addEventListener('change',()=>{
+ if(!leaveAllowed()){gradeInput.value=String(data.grade);return;}
+ clearInterval(clockId);active=null;
+ data.grade=Number(gradeInput.value);topicFilter='';search='';save();
+ if(routes.includes(currentRoute()))render();else location.hash='lo-trinh';
+});
+window.addEventListener('hashchange',()=>{if(currentRoute()!=='main'){render();main.focus();window.scrollTo(0,0);}});
+render();
+})();
+
+</script>
+</body>
+</html>
