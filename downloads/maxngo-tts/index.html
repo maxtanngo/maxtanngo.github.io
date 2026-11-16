@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tải MaxNgo-TTS để tạo giọng đọc tiếng Việt và lồng tiếng phụ đề trên máy.">
+  <title>MaxNgo-TTS | Tải về</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root { font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif; color: #122a29; background: #f2f7f3; }
+    body { margin: 0; }
+    main { width: min(960px, calc(100% - 32px)); margin: 28px auto; }
+    header { padding: clamp(26px, 6vw, 66px); background: radial-gradient(ellipse at 90% 80%, #175e50, transparent 60%), #122a29; color: #fff; border-radius: 24px; }
+    header a { color: #dcfae9; }
+    h1 { font-size: clamp(3rem, 9vw, 6rem); line-height: 1; letter-spacing: -.055em; margin: 30px 0 12px; }
+    header p { color: #dcfae9; max-width: 50ch; }
+    .download { display: inline-block; margin-top: 12px; padding: 12px 18px; border-radius: 10px; color: #122a29; background: #b9f68d; font-weight: 700; text-decoration: none; }
+    .download:hover { background: #a3e97c; }
+    section { border: 1px solid #d2e5d9; border-radius: 18px; padding: clamp(18px, 4vw, 32px); margin-block: 16px; background: white; }
+    h2 { margin-top: 0; }
+    li { margin-block: 8px; }
+    footer { padding: 10px 2px; }
+    a { color: #075b50; }
+    a:focus-visible { outline: 3px solid #2bbd8c; outline-offset: 4px; }
+    code { overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <a href="/downloads/">Tải về MaxNgo</a>
+      <h1>MaxNgo-TTS</h1>
+      <p>Tạo giọng đọc tiếng Việt cho video, truyện kể và phụ đề ngay trên máy.</p>
+      <a class="download" href="./MaxNgo-TTS.zip" download>Tải gói chạy macOS và Windows</a>
+      <p>Gói ZIP gồm mã nguồn và trình khởi chạy. Lần đầu cần mạng để tải phụ thuộc và mô hình.</p>
+    </header>
+    <section>
+      <h2>Cách chạy</h2>
+      <ol>
+        <li>Giải nén gói ZIP và cài <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>.</li>
+        <li>Trên macOS, mở Terminal trong thư mục đã giải nén rồi chạy <code>bash Mo-MaxNgo-TTS.command</code>. Trên Windows, mở <code>Mo-MaxNgo-TTS.bat</code>.</li>
+        <li>Khi ứng dụng khởi động, mở <a href="http://127.0.0.1:7860/">127.0.0.1:7860</a>, chuẩn bị giọng đọc, nhập văn bản và nghe thử trước khi tải âm thanh.</li>
+      </ol>
+    </section>
+    <footer>
+      Phát triển từ <a href="https://github.com/pnnbao97/VieNeu-TTS">VieNeu-TTS của Phạm Nguyễn Ngọc Bảo và các cộng tác viên</a>.
+      <a href="https://github.com/pnnbao97/VieNeu-TTS/blob/22dd2ef2a89bba24a77da6dbc84c75f7f4fda05b/LICENSE">Apache-2.0</a>
+    </footer>
+  </main>
+</body>
+</html>
