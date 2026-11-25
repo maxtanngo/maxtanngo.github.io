@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta name="maxngo-edition" content="public">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MaxNgo EDU · Luyện thi đại học</title>
+<link rel="stylesheet" href="./style.css"><script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<aside><a class="brand" href="#kho">MaxNgo <span>EDU</span></a><nav aria-label="Điều hướng">
+<a href="#tien-do">Tiến độ</a><a href="#kho">Kho đề</a><a href="#thi">Phòng thi</a><a href="#sai">Sổ câu sai</a><a href="#gia-su">Gia sư</a>
+</nav><small><a href="../">← Về Học tập MaxNgo</a></small></aside>
+<main id="view"></main>
+<template id="library"><header class="hero"><p class="eyebrow">LUYỆN THI ĐẠI HỌC</p><h1>Ôn tập theo<br>mục tiêu của bạn.</h1><p>Tìm tài liệu từ đơn vị ra đề và luyện cách làm bài trước kỳ thi.</p><a class="button" href="#thi">Vào phòng thi <span aria-hidden="true">↗</span></a></header>
+<section class="practice-panel"><h2>Bài luyện tự biên soạn</h2><div class="grid" id="practice-list"></div></section>
+<section><h2>Nguồn đề và đáp án</h2><p>Đề và đáp án bên thứ ba đang chờ xác nhận quyền sử dụng. Anh/chị có thể mở tài liệu tại trang công bố. Các bài luyện trực tuyến là nội dung MaxNgo EDU tự biên soạn.</p><div class="filters">
+<label>Tìm nguồn<input id="query" placeholder="Tên kỳ thi, môn hoặc đơn vị"></label>
+<label>Năm<select id="year"><option value="">Tất cả</option></select></label>
+<label>Môn<select id="subject"><option value="">Tất cả</option></select></label>
+<label>Loại tài liệu<select id="kind"><option value="">Tất cả</option></select></label>
+</div><p id="count" role="status"></p><div id="sources" class="grid"></div></section></template>
+</body></html>
