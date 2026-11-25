@@ -104,3 +104,8 @@
 .study-tutor-callout h2{margin:0 0 4px;font-size:22px}
 .study-tutor-callout p{margin:0;color:#c6d2c3}
 .study-tutor-callout + .study-grid{margin-top:18px}
+
+#maxngo-edu { scroll-margin-top: 100px; }
+.study-feature-list { margin: 0 0 14px; padding-inline-start: 20px; color: #dbe5da; line-height: 1.55; }
+.study-feature-list li + li { margin-top: 5px; }
+.study-card .study-rights-note { font-size: 13px; }

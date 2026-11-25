@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://maxngo.io.vn/hoc-tap/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/main-DcVfOm0a.css">
-  <link rel="stylesheet" href="/hoc-tap/hoc-tap.css?v=gia-su">
+  <link rel="stylesheet" href="/hoc-tap/hoc-tap.css?v=edu-poster">
 <link rel="stylesheet" href="/assets/site-navigation.css?v=20261113"><script defer src="/assets/site-navigation.js?v=20261113"></script><script defer src="/hoc-tap/subject-filter.js"></script></head>
 <body class="study-page maxngo-has-navigation"><header class="maxngo-header"><div class="maxngo-bar"><a href="/" class="maxngo-brand" aria-label="MaxNgo AI trang chủ"><span aria-hidden="true">M.</span>MaxNgo AI</a><button class="maxngo-menu-toggle" type="button" aria-controls="maxngo-navigation" aria-expanded="false">Menu</button><nav class="maxngo-menu" id="maxngo-navigation" aria-label="Điều hướng chính"><a href="/hoc-tap/" class="maxngo-learning" aria-current="page">Học Tập</a><details class="maxngo-group"><summary>Công Cụ Marketing</summary><div class="maxngo-submenu"><a href="/cong-cu-marketing/">Tất cả công cụ marketing</a><a href="/auto-fb/">Auto FB</a><a href="/dichvideo-pro/">Dịch Video Pro</a></div></details><a href="/du-lich/">Gợi ý Du Lịch</a><a href="/games/">Game</a><a href="/downloads/">Tải Về</a><a href="/guides/">Hướng Dẫn</a><a href="/about/">Về MaxNgo AI</a></nav></div></header>
   <header class="site-header">
@@ -23,10 +23,6 @@
       <h1>Học tập</h1>
       <p>Học Toán, Vật Lý, Hóa Học và luyện đề miễn phí trên MaxNgo.</p>
     </header>
-    <aside class="study-tutor-callout">
-      <div><h2>MaxNgo EDU · Luyện thi đại học</h2><p>Làm bài luyện Toán, xem điểm và ôn lại câu sai. Đề thi chính thức có liên kết nguồn trong khi chờ xác nhận quyền sử dụng.</p></div>
-      <a class="button primary" href="./maxngo-edu/">Mở MaxNgo EDU <span aria-hidden="true">→</span></a>
-    </aside>
     <div class="study-filter" id="study-filter" hidden>
       <fieldset aria-controls="study-courses">
         <legend>Môn học</legend>
@@ -44,6 +40,33 @@
       <a class="button primary" href="/hoc-tap/gia-su/">Mở gia sư <span aria-hidden="true">→</span></a>
     </aside>
     <ul class="study-grid" id="study-courses" aria-label="Danh sách ứng dụng học tập">
+      <li data-subject="toan" id="maxngo-edu">
+        <article class="study-card">
+          <figure class="study-visual">
+            <img src="./media/maxngo-edu-poster.jpg"
+              srcset="./media/maxngo-edu-poster-720.jpg 720w, ./media/maxngo-edu-poster.jpg 1440w"
+              sizes="(min-width: 1136px) 630px, (min-width: 761px) 57vw, calc(100vw - 36px)"
+              width="1440" height="810" fetchpriority="high" decoding="async"
+              alt="Nữ sinh cuối cấp giới thiệu giao diện luyện thi MaxNgo EDU trên iPad">
+            <figcaption>Ảnh minh họa MaxNgo EDU</figcaption>
+          </figure>
+          <div class="study-card-content">
+            <p class="study-grade">Lớp 12 · Ôn thi tốt nghiệp và xét tuyển đại học</p>
+            <h2>MaxNgo EDU · Luyện thi đại học</h2>
+            <p>Luyện Toán có bấm giờ, xem lại lời giải và theo dõi tiến độ qua từng lần nộp bài.</p>
+            <ul class="study-feature-list">
+              <li><strong>Phòng thi thử:</strong> Tự lưu bài, tự nộp khi hết giờ và chấm điểm.</li>
+              <li><strong>Sổ câu sai:</strong> Ôn lại câu mất điểm với gợi ý và lời giải.</li>
+              <li><strong>Nguồn đề 2017–2026:</strong> Lọc theo năm, môn và mã đề đã đối chiếu.</li>
+            </ul>
+            <p class="study-rights-note">Đề chính thức ở dạng liên kết nguồn trong khi chờ giấy phép sử dụng.</p>
+            <div class="study-actions">
+              <a class="button primary" href="./maxngo-edu/">Mở MaxNgo EDU <span aria-hidden="true">→</span></a>
+              <a class="button secondary" href="./maxngo-edu/#thi">Vào phòng thi</a>
+            </div>
+          </div>
+        </article>
+      </li>
       <li data-subject="toan">
         <article class="study-card">
           <figure class="study-visual">
@@ -53,7 +76,7 @@
               sizes="(min-width: 1136px) 630px, (min-width: 761px) 57vw, calc(100vw - 36px)"
               width="1440" height="805"
               alt="Một bạn nhỏ chỉ vào màn hình máy tính bảng có bài học Toán của VietMath Kids"
-              fetchpriority="high"
+              loading="lazy"
               decoding="async">
             <figcaption>Ảnh minh họa VietMath Kids</figcaption>
           </figure>
