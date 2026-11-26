@@ -30,6 +30,6 @@ jobs:
           CF_AI_TOKEN: ${{ secrets.CF_AI_TOKEN }}
           SCHOLARSHIP_WORKER_URL: ${{ vars.SCHOLARSHIP_STAGING_WORKER_URL }}
           SCHOLARSHIP_PRODUCTION_WORKER_URL: ${{ vars.SCHOLARSHIP_WORKER_URL }}
-          SCHOLARSHIP_INGEST_TOKEN: ${{ secrets.SCHOLARSHIP_INGEST_TOKEN }}
+          SCHOLARSHIP_INGEST_TOKEN: ${{ secrets.SCHOLARSHIP_STAGING_INGEST_TOKEN || secrets.SCHOLARSHIP_INGEST_TOKEN }}
         shell: bash
         run: python3 scholarship/staging.py | tee -a "$GITHUB_STEP_SUMMARY"
