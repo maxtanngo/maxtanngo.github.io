@@ -1,0 +1,6 @@
+__pycache__/
+.local/
+.wrangler/
+.dev.vars*
+.env*
+wrangler.toml
