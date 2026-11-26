@@ -20,7 +20,7 @@ USER_AGENT = "MaxNgoScholarship"
 LIMIT = 1_500_000
 MAX_AI_CALLS = 4
 GEMINI = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent"
-WORKERS_AI = "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run/@cf/meta/llama-3.1-8b-instruct-fast"
+WORKERS_AI = "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run/@cf/meta/llama-3.3-70b-instruct-fp8-fast"
 PUBLIC_FIELDS = ("id", "title", "provider", "country", "level", "funding", "url", "description")
 DATE = r"[0-9]{1,2} [A-Za-z]+ [0-9]{4}"
 
@@ -244,7 +244,16 @@ def workers_ai_call(source, env):
         raise ValueError("Invalid Cloudflare account ID")
     data = json.loads(request(WORKERS_AI.format(account=account), {
         "messages": [{"role": "user", "content": prompt(source)}],
-        "response_format": {"type": "json_object"}, "max_tokens": 256
+        "response_format": {
+            "type": "json_schema",
+            "json_schema": {
+                "type": "object",
+                "properties": {"translation": {"type": "string"}},
+                "required": ["translation"],
+                "additionalProperties": False,
+            },
+        },
+        "max_tokens": 256
     }, {"Authorization": f"Bearer {env['CF_AI_TOKEN']}"}, limit=20_000))
     return data["result"]["response"]
 
