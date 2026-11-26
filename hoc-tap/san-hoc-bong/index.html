@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://*.workers.dev https://raw.githubusercontent.com; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Săn Học Bổng Quốc Tế | MaxNgo Scholarship</title>
+  <meta name="description" content="Tìm, lọc và lưu học bổng quốc tế. Đối chiếu hạn nộp và điều kiện trên trang chính thức.">
+  <link rel="canonical" href="https://maxngo.io.vn/hoc-tap/san-hoc-bong/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <header class="top"><nav class="shell" aria-label="Điều hướng">
+    <a class="brand" href="/"><span aria-hidden="true">M.</span> MaxNgo</a>
+    <a href="../">← Học tập</a>
+  </nav></header>
+  <main class="shell">
+    <header class="intro">
+      <p class="product">MaxNgo Scholarship</p>
+      <h1>Săn Học Bổng Quốc Tế</h1>
+      <p>Tìm học bổng theo bậc học và quốc gia. Xem hạn nộp, điều kiện và cách ứng tuyển trên nguồn chính thức.</p>
+    </header>
+    <section aria-label="Tìm và lọc học bổng" class="controls">
+      <label class="search">Tìm học bổng
+        <input type="search" id="search" placeholder="Tên chương trình, trường hoặc quốc gia">
+      </label>
+      <div class="filters">
+        <label>Quốc gia <select id="country"><option value="">Tất cả</option></select></label>
+        <label>Bậc học <select id="level"><option value="">Tất cả</option></select></label>
+        <label>Mức tài trợ <select id="funding"><option value="">Tất cả</option></select></label>
+        <label>Hạn nộp <select id="status">
+          <option value="">Tất cả</option><option value="open">Đang mở</option>
+          <option value="upcoming">Sắp mở</option><option value="closed">Đã đóng</option>
+          <option value="expired">Đã qua hạn</option><option value="unknown">Chưa xác nhận</option>
+        </select></label>
+      </div>
+      <div class="actions">
+        <label class="saved"><input type="checkbox" id="saved"> Chỉ xem mục đã lưu</label>
+        <button type="button" id="reset">Xóa bộ lọc</button>
+      </div>
+    </section>
+    <p class="notice" id="storage-note" role="status" hidden>Trình duyệt chỉ lưu được trong phiên này.</p>
+    <noscript><p>Bật JavaScript để xem danh sách và dùng bộ lọc.</p></noscript>
+    <p class="notice" id="data-status" role="status">Đang tải dữ liệu…</p>
+    <section aria-labelledby="results-title">
+      <div class="results-heading"><h2 id="results-title">Danh sách học bổng</h2><span id="count" role="status"></span></div>
+      <p id="empty" hidden></p>
+      <ul class="cards" id="results"></ul>
+    </section>
+    <footer>Danh sách đã lưu nằm trên trình duyệt này. Hồ sơ ứng tuyển do chương trình học bổng tiếp nhận.</footer>
+  </main>
+</body>
+</html>

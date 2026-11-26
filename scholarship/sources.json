@@ -1,0 +1,71 @@
+[
+  {
+    "id": "ubc-international-scholars",
+    "title": "UBC International Scholars Program",
+    "provider": "University of British Columbia",
+    "country": "Canada",
+    "level": "Đại học",
+    "funding": "Theo nhu cầu tài chính",
+    "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+    "description": "Học bổng cho sinh viên quốc tế có thành tích học tập tốt, thể hiện năng lực lãnh đạo và cần hỗ trợ tài chính. Hỏi trường phổ thông về việc đề cử.",
+    "translationInput": "The award considers academic achievement, leadership and significant financial need.",
+    "reviewed": {
+      "checkedAt": "2026-11-26T04:10:00Z",
+      "signal": "window",
+      "closesAt": "2026-12-02T19:00:00Z",
+      "cycle": "Nhập học tháng 9/2027"
+    }
+  },
+  {
+    "id": "chevening-vietnam",
+    "title": "Chevening Việt Nam",
+    "provider": "Chevening",
+    "country": "Vương quốc Anh",
+    "level": "Thạc sĩ",
+    "funding": "Toàn phần",
+    "url": "https://www.chevening.org/scholarship/vietnam/",
+    "description": "Chương trình của Chính phủ Anh dành cho ứng viên Việt Nam theo học các khóa thạc sĩ đủ điều kiện tại Vương quốc Anh.",
+    "translationInput": "The UK government scholarship supports eligible master's studies in the United Kingdom.",
+    "reviewed": {
+      "checkedAt": "2026-11-26T04:10:00Z",
+      "signal": "closed",
+      "cycle": "2027–2028"
+    }
+  },
+  {
+    "id": "australia-awards-vietnam",
+    "title": "Australia Awards Việt Nam",
+    "provider": "Bộ Ngoại giao và Thương mại Úc",
+    "country": "Úc",
+    "level": "Thạc sĩ",
+    "funding": "Toàn phần",
+    "url": "https://www.dfat.gov.au/people-to-people/australia-awards/australia-awards-scholarships-opening-and-closing-dates",
+    "description": "Học bổng Chính phủ Úc dành cho ứng viên Việt Nam. Đối chiếu dòng Việt Nam trên lịch chính thức và hồ sơ hướng dẫn của từng đợt.",
+    "translationInput": "Australia Awards support eligible Vietnamese applicants pursuing master's studies in Australia.",
+    "reviewed": {
+      "checkedAt": "2026-11-26T04:10:00Z",
+      "signal": "window",
+      "opensAt": "2026-01-31T22:00:00Z",
+      "closesAt": "2026-04-30T04:00:00Z",
+      "cycle": "Đợt nộp hồ sơ 2026"
+    }
+  },
+  {
+    "id": "asean-scholarship-vietnam",
+    "title": "ASEAN Scholarship cho Việt Nam",
+    "provider": "Bộ Giáo dục Singapore (MOE)",
+    "country": "Singapore",
+    "level": "Trung học",
+    "funding": "Toàn phần",
+    "url": "https://hanoi.mfa.gov.sg/mission-updates/aseanscholarshipay2027/",
+    "description": "Học bổng do Bộ Giáo dục Singapore quản lý, từ Secondary 3 đến Pre-University 2. Gói hỗ trợ gồm học phí, chỗ ở và trợ cấp.",
+    "translationInput": "The ASEAN Scholarship provides education opportunities for eligible students from Vietnam.",
+    "reviewed": {
+      "checkedAt": "2026-11-26T04:10:00Z",
+      "signal": "closed",
+      "cycle": "Năm học 2027",
+      "deadlineOn": "2026-02-27"
+    },
+    "feedUrl": "https://hanoi.mfa.gov.sg/mission-updates/"
+  }
+]

@@ -1,0 +1,35 @@
+name: Scholarship staging smoke test
+on:
+  push:
+    branches: [maxngo-scholarship-staging]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: maxngo-scholarship-staging
+  cancel-in-progress: false
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Run local tests
+        run: python3 -m unittest discover -s scholarship/tests -p 'test_*.py'
+      - name: Check staging configuration and services
+        env:
+          SCHOLARSHIP_STAGING_ENABLED: ${{ vars.SCHOLARSHIP_STAGING_ENABLED }}
+          GEMINI_TIER: ${{ vars.GEMINI_TIER }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CLOUDFLARE_TIER: ${{ vars.CLOUDFLARE_TIER }}
+          CF_ACCOUNT_ID: ${{ vars.CF_ACCOUNT_ID || secrets.CF_ACCOUNT_ID || secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_AI_TOKEN: ${{ secrets.CF_AI_TOKEN || secrets.CLOUDFLARE_API_TOKEN }}
+          SCHOLARSHIP_WORKER_URL: ${{ vars.SCHOLARSHIP_STAGING_WORKER_URL }}
+          SCHOLARSHIP_PRODUCTION_WORKER_URL: ${{ vars.SCHOLARSHIP_WORKER_URL }}
+          SCHOLARSHIP_INGEST_TOKEN: ${{ secrets.SCHOLARSHIP_STAGING_INGEST_TOKEN || secrets.SCHOLARSHIP_INGEST_TOKEN }}
+        shell: bash
+        run: python3 scholarship/staging.py | tee -a "$GITHUB_STEP_SUMMARY"
