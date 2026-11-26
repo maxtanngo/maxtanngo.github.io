@@ -23,8 +23,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .product { margin: 0; color: var(--blue); font-size: .9rem; font-weight: 800; }
 h1 { font-size: clamp(2.15rem, 6vw, 4.2rem); line-height: 1.08; margin: .4rem 0 .95rem; letter-spacing: -.045em; }
 .intro > p:last-child { max-width: 62ch; margin: 0; color: var(--muted); }
-.controls, .card { background: white; border: 1px solid var(--line); border-radius: 18px; padding: clamp(.95rem, 3vw, 1.5rem); }
-.controls { box-shadow: 0 12px 36px #2947730c; }
+.controls, .card { background: white; border: 1px solid var(--line); border-radius: 18px; }
+.controls { padding: clamp(.95rem, 3vw, 1.5rem); box-shadow: 0 12px 36px #2947730c; }
 .controls label { display: grid; gap: .32rem; font-weight: 650; font-size: .94rem; min-width: 0; }
 .controls input[type=search], select, button { min-height: 44px; font: inherit; }
 .controls input[type=search], select { width: 100%; border: 1px solid #aebed6; border-radius: 8px; background: #fff; color: inherit; padding: .5rem .68rem; }
@@ -40,13 +40,28 @@ button[aria-pressed=true] { background: var(--blue); color: white; }
 .results-heading { margin: 1rem 0 .7rem; }
 h2 { margin: 0; font-size: 1.35rem; }
 .cards { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding: 0; margin: 0; }
-.card { display: flex; flex-direction: column; overflow-wrap: anywhere; }
-.card h3 { margin: .55rem 0 .15rem; line-height: 1.25; font-size: 1.3rem; }
-.card p { margin: .3rem 0; }
-.card .detail, .card .verified { font-size: .9rem; color: var(--muted); }
-.card .deadline { margin-top: .75rem; }
-.card .card-actions { margin-top: auto; padding-top: .8rem; }
-.card-actions a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 650; }
+.card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; overflow-wrap: anywhere; box-shadow: 0 8px 26px #2947730d; }
+.campus { margin: 0; background: #e6edf7; }
+.campus img { display: block; width: 100%; aspect-ratio: 2 / 1; object-fit: cover; object-position: center 46%; }
+.campus figcaption { padding: .45rem clamp(1rem, 3vw, 1.5rem); background: #f0f4fa; color: var(--muted); font-size: .76rem; }
+.card-content { display: flex; flex: 1; flex-direction: column; padding: clamp(1rem, 3vw, 1.5rem); }
+.card-heading { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .65rem; }
+.cycle, .provider { color: var(--muted); font-size: .88rem; }
+.card h3 { margin: .7rem 0 .15rem; line-height: 1.2; font-size: clamp(1.3rem, 2.4vw, 1.65rem); letter-spacing: -.025em; }
+.provider { margin: 0; }
+.card-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; margin: 1rem 0 .8rem; padding: .8rem 0; border-block: 1px solid var(--line); }
+.card-facts dt { color: var(--muted); font-size: .76rem; }
+.card-facts dd { margin: .1rem 0 0; font-size: .9rem; font-weight: 700; }
+.description { margin: .15rem 0 .7rem; }
+.card-note { margin: 0 0 .85rem; color: var(--muted); font-size: .88rem; }
+.card-note strong { display: block; color: #243959; font-weight: 700; }
+.deadline { display: grid; gap: .1rem; margin-top: auto; padding: .65rem .8rem; border-left: 3px solid #6b92d5; border-radius: 0 8px 8px 0; background: #f3f7ff; }
+.deadline span, .deadline small { color: var(--muted); font-size: .8rem; }
+.deadline strong { font-size: .96rem; }
+.card-actions { padding-top: .75rem; }
+.card-actions a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+.photo-credits summary { cursor: pointer; width: fit-content; text-decoration: underline; text-underline-offset: .2em; }
+.photo-credits ul { padding-inline-start: 1.15rem; }
 .badge { align-self: flex-start; font-size: .84rem; font-weight: 750; padding: .2rem .62rem; border-radius: 99px; background: #edf0f5; color: #394860; }
 .badge[data-state=open] { background: #def6e9; color: #15573b; }
 .badge[data-state=upcoming] { background: #e5efff; color: #194193; }

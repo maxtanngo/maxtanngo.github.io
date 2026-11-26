@@ -1,3 +1,4 @@
+import { cardDetails } from "./card-details.mjs";
 import { config } from "./config.mjs";
 import { folded, isFresh, labels, loadSnapshot, statusOf } from "./model.mjs";
 
@@ -33,20 +34,48 @@ function element(tag, text, className) {
 
 function renderCard(item, state) {
   const card = element("li", null, "card");
+  const details = cardDetails.get(item.id);
+  if (details) {
+    const figure = element("figure", null, "campus");
+    const photo = element("img");
+    photo.src = new URL(`./images/${details.photo}.jpg`, import.meta.url).href;
+    photo.alt = "";
+    photo.loading = "lazy";
+    photo.decoding = "async";
+    photo.addEventListener("error", () => figure.remove(), { once: true });
+    figure.append(photo, element("figcaption", details.caption));
+    card.append(figure);
+  }
+
+  const content = element("div", null, "card-content");
+  const heading = element("div", null, "card-heading");
   const badge = element("span", labels[state], "badge");
   badge.dataset.state = state;
-  card.append(badge, element("h3", item.title),
-    element("p", item.provider, "detail"),
-    element("p", [item.country, item.level, item.funding].join(" · "), "detail"),
-    element("p", item.description));
-  if (item.cycle) card.append(element("p", item.cycle, "detail"));
-  const deadline = item.closesAt
-    ? `${item.signal === "unknown" ? "Hạn ghi nhận trước đó" : "Hạn nộp"} · ${dates.format(Date.parse(item.closesAt))} (giờ Việt Nam)`
-    : item.deadlineOn
-      ? `Hạn theo ngày do nguồn công bố · ${item.deadlineOn.split("-").reverse().join("/")}`
-      : "Xem hạn nộp trên trang của chương trình.";
-  card.append(element("p", deadline, "deadline"));
-  card.append(element("p", `Mốc đối chiếu nguồn · ${dates.format(Date.parse(item.checkedAt))}`, "verified"));
+  heading.append(badge);
+  if (item.cycle) heading.append(element("span", item.cycle, "cycle"));
+  content.append(heading, element("h3", item.title), element("p", item.provider, "provider"));
+
+  const facts = element("dl", null, "card-facts");
+  for (const [label, value] of [["Quốc gia", item.country], ["Bậc học", item.level], ["Tài trợ", item.funding]]) {
+    const fact = element("div");
+    fact.append(element("dt", label), element("dd", value));
+    facts.append(fact);
+  }
+  content.append(facts, element("p", item.description, "description"));
+  if (details?.note && (!details.cycle || details.cycle === item.cycle)) {
+    const note = element("p", null, "card-note");
+    note.append(element("strong", "Điểm cần lưu ý"), document.createTextNode(details.note));
+    content.append(note);
+  }
+
+  const deadline = element("div", null, "deadline");
+  const deadlineLabel = item.closesAt && state === "unknown" ? "Hạn đã ghi nhận" : "Hạn nộp";
+  const deadlineValue = item.closesAt
+    ? `${dates.format(Date.parse(item.closesAt))} (giờ Việt Nam)`
+    : item.deadlineOn?.split("-").reverse().join("/") || "Xem trên trang chính thức";
+  deadline.append(element("span", deadlineLabel), element("strong", deadlineValue));
+  deadline.append(element("small", `Đối chiếu nguồn · ${dates.format(Date.parse(item.checkedAt))}`));
+  content.append(deadline);
 
   const actions = element("div", null, "card-actions");
   const link = element("a", "Xem nguồn chính thức ↗");
@@ -78,7 +107,8 @@ function renderCard(item, state) {
     }
   });
   actions.append(link, save);
-  card.append(actions);
+  content.append(actions);
+  card.append(content);
   return card;
 }
 
